@@ -19,8 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-Wj-eNt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="50J-IY-aNx">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="cart" catalog="system" id="eeJ-Ir-P8Q"/>
+                            <barButtonItem key="rightBarButtonItem" title="Item" image="suit.heart" catalog="system" id="f9D-PV-bQt"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <searchBar contentMode="redraw" placeholder="What are you looking for ?" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8z-UEi">
+                    <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-gk-h6p">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ogp-Bd-eiB">
                         <size key="itemSize" width="128" height="128"/>
@@ -33,15 +46,23 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="QEW-gk-h6p" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="71Q-Tk-egs"/>
-                <constraint firstItem="QEW-gk-h6p" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JLP-kw-ENm"/>
-                <constraint firstItem="QEW-gk-h6p" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wme-Ej-BVg"/>
-                <constraint firstItem="QEW-gk-h6p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zpS-n4-mhO"/>
+                <constraint firstItem="7Tn-Wj-eNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2R1-Mj-KOV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QEW-gk-h6p" secondAttribute="bottom" id="AAA-ci-ia9"/>
+                <constraint firstItem="8vi-8z-UEi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HkZ-DE-luI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="7Tn-Wj-eNt" secondAttribute="top" id="Spo-BE-Y0A"/>
+                <constraint firstItem="QEW-gk-h6p" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bCK-Ef-Cys"/>
+                <constraint firstItem="QEW-gk-h6p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dcM-4D-jea"/>
+                <constraint firstItem="8vi-8z-UEi" firstAttribute="top" secondItem="7Tn-Wj-eNt" secondAttribute="bottom" id="eJb-Hc-pOl"/>
+                <constraint firstItem="QEW-gk-h6p" firstAttribute="top" secondItem="8vi-8z-UEi" secondAttribute="bottom" id="fYK-jX-BKp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Tn-Wj-eNt" secondAttribute="trailing" id="lrf-VC-Xhc"/>
+                <constraint firstItem="8vi-8z-UEi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mAR-Dq-0uj"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </view>
     </objects>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

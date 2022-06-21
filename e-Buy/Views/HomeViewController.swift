@@ -16,7 +16,11 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        registerCell()
+        adsCollectionView.delegate = self
+        adsCollectionView.dataSource = self
+        brandsCollectionView.delegate = self
+        brandsCollectionView.dataSource = self
     }
     
     func registerCell(){

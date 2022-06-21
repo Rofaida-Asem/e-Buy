@@ -8,7 +8,11 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var categoryImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var addToBasketButton: UIButton!
+    @IBOutlet weak var favotiteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

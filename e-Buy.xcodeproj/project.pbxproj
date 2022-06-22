@@ -23,6 +23,7 @@
 		9A84379F2861ED2600DCE742 /* AdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8437992861ED2600DCE742 /* AdsCollectionViewCell.swift */; };
 		9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */; };
 		9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A897D5F2861EDB9000CE5F4 /* ApiService.swift */; };
+		A409353128631AB3001E270D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409353028631AB3001E270D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9A8437992861ED2600DCE742 /* AdsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A897D5F2861EDB9000CE5F4 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A409353028631AB3001E270D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		9A8437642861EC1000DCE742 /* e-Buy */ = {
 			isa = PBXGroup;
 			children = (
+				A409352F28631A7B001E270D /* Constants */,
 				9A897D5E2861ED8A000CE5F4 /* NetworkManager */,
 				9A897D5D2861ED76000CE5F4 /* ViewModel */,
 				9A897D5C2861ED70000CE5F4 /* Model */,
@@ -178,6 +181,14 @@
 				9A897D5F2861EDB9000CE5F4 /* ApiService.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		A409352F28631A7B001E270D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A409353028631AB3001E270D /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,
 				9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */,
 				9A84379C2861ED2600DCE742 /* HomeViewController.swift in Sources */,
+				A409353128631AB3001E270D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

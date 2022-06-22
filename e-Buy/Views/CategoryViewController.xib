@@ -22,7 +22,7 @@
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-Wj-eNt">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <items>
-                        <navigationItem title="Title" id="50J-IY-aNx">
+                        <navigationItem title="Category" id="50J-IY-aNx">
                             <barButtonItem key="leftBarButtonItem" title="Item" image="cart" catalog="system" id="eeJ-Ir-P8Q"/>
                             <barButtonItem key="rightBarButtonItem" title="Item" image="suit.heart" catalog="system" id="f9D-PV-bQt"/>
                         </navigationItem>

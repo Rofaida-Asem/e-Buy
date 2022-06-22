@@ -27,6 +27,7 @@
 		9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */; };
 		9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A897D5F2861EDB9000CE5F4 /* ApiService.swift */; };
 		9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8500128622E180010931F /* Launch Screen.storyboard */; };
+		9AC79A0928633DC7000B6EAC /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 9AC79A0828633DC7000B6EAC /* Constants */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
 		EAF96F968974B109890FF96F /* Pods_e_Buy_e_BuyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D187ED948896E64B645D205B /* Pods_e_Buy_e_BuyUITests.framework */; };
 		ECB6C19348B93E0E98ABD62D /* Pods_e_BuyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */; };
@@ -76,6 +77,7 @@
 		9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A897D5F2861EDB9000CE5F4 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9AA8500128622E180010931F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9AC79A0828633DC7000B6EAC /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68D2F7712ABB3AE359C0A8E /* Pods-e-Buy-e-BuyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy-e-BuyUITests.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy-e-BuyUITests/Pods-e-Buy-e-BuyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB41E51C6350789018C3B04F /* Pods-e-Buy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy/Pods-e-Buy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		9A8437642861EC1000DCE742 /* e-Buy */ = {
 			isa = PBXGroup;
 			children = (
+				9AC79A0828633DC7000B6EAC /* Constants */,
 				9A897D5E2861ED8A000CE5F4 /* NetworkManager */,
 				9A897D5D2861ED76000CE5F4 /* ViewModel */,
 				9A897D5C2861ED70000CE5F4 /* Model */,
@@ -348,6 +351,7 @@
 				9A25794D286233540077DF73 /* CategoryCollectionViewCell.xib in Resources */,
 				9A84376D2861EC1000DCE742 /* Main.storyboard in Resources */,
 				9A84379B2861ED2600DCE742 /* HomeViewController.xib in Resources */,
+				9AC79A0928633DC7000B6EAC /* Constants in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

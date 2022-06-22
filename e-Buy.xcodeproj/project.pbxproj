@@ -28,6 +28,7 @@
 		9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A897D5F2861EDB9000CE5F4 /* ApiService.swift */; };
 		9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8500128622E180010931F /* Launch Screen.storyboard */; };
 		9AC79A0928633DC7000B6EAC /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 9AC79A0828633DC7000B6EAC /* Constants */; };
+		A409353C28634877001E270D /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409353B28634877001E270D /* ProductsModel.swift */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
 		EAF96F968974B109890FF96F /* Pods_e_Buy_e_BuyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D187ED948896E64B645D205B /* Pods_e_Buy_e_BuyUITests.framework */; };
 		ECB6C19348B93E0E98ABD62D /* Pods_e_BuyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */; };
@@ -78,6 +79,7 @@
 		9A897D5F2861EDB9000CE5F4 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9AA8500128622E180010931F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AC79A0828633DC7000B6EAC /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
+		A409353B28634877001E270D /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68D2F7712ABB3AE359C0A8E /* Pods-e-Buy-e-BuyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy-e-BuyUITests.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy-e-BuyUITests/Pods-e-Buy-e-BuyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB41E51C6350789018C3B04F /* Pods-e-Buy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy/Pods-e-Buy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		9A897D5C2861ED70000CE5F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A409353B28634877001E270D /* ProductsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				9A84376A2861EC1000DCE742 /* ViewController.swift in Sources */,
 				9A8437662861EC1000DCE742 /* AppDelegate.swift in Sources */,
+				A409353C28634877001E270D /* ProductsModel.swift in Sources */,
 				9A84379F2861ED2600DCE742 /* AdsCollectionViewCell.swift in Sources */,
 				9A8437682861EC1000DCE742 /* SceneDelegate.swift in Sources */,
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,

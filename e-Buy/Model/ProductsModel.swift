@@ -9,12 +9,12 @@ import Foundation
 
 
 // MARK: - Products
-struct Products {
+struct Products: Decodable {
     let products: [Product]
 }
 
 // MARK: - Product
-struct Product {
+struct Product: Decodable {
     let id: Int
     let title, bodyHTML, vendor, productType: String
     let createdAt: Date

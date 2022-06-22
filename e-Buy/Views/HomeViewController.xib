@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="e_Buy" customModuleProvider="target">
             <connections>
+                <outlet property="adsCollectionView" destination="IYU-uM-Dym" id="UVV-Wg-eVl"/>
+                <outlet property="brandsCollectionView" destination="p9E-F3-fnx" id="1sa-NU-SJU"/>
                 <outlet property="cartButton" destination="VM6-hM-YTK" id="1l1-P6-En3"/>
                 <outlet property="favoriteButton" destination="WnW-2d-CeT" id="uhD-Ax-7iU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

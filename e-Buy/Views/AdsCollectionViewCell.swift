@@ -12,6 +12,8 @@ class AdsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        adsImageView.layer.cornerRadius = 8
+        adsImageView.contentMode = .scaleAspectFill
         // Initialization code
     }
 

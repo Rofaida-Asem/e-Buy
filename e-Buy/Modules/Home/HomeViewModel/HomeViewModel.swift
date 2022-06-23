@@ -9,13 +9,31 @@ import Foundation
 
 class HomeViewModel {
     
-    var Product: [Product]?{
+    var Products: [Product]?{
         didSet{
             bindingResult()
         }
     }
     
     var bindingResult: (()->()) = {}
+    init(serviece:ApiService){
+        
+    }
     
-    
+    func getData(){
+        
+        DispatchQueue.global().async {
+            
+            let url = Constants.getProducts_URL()
+            
+            ApiService.shared.getData(url: url) { [weak self] (result : Products?, error) in
+                if let error = error {
+                    print(error)
+                }else{
+                    guard let results = result else { return }
+                    self?.Products = results.products
+                }
+            }
+        }
+    }
 }

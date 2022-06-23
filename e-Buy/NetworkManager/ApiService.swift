@@ -12,10 +12,6 @@ class ApiService {
     
     static let shared = ApiService()
     
-    private init() {
-        
-    }
-    
     func getData<T: Decodable>(url: String, completion: @escaping (T?,Error?)-> Void){
         AF.request(url).response { (response) in
             guard let data = response.data else { return }

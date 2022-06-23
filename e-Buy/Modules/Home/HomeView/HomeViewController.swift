@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
     
@@ -13,6 +14,19 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     @IBOutlet weak var adsCollectionView: UICollectionView!
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     @IBOutlet weak var brandsCollectionView: UICollectionView!
+    
+    var homeViewModel: HomeViewModel?
+
+    override func viewWillAppear(_ animated: Bool) {
+        registerCell()
+        homeViewModel = HomeViewModel(serviece: ApiService())
+        homeViewModel?.bindingResult = { [weak self] in
+            DispatchQueue.main.async {
+                self?.brandsCollectionView.reloadData()
+            }
+        }
+        homeViewModel?.getData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +46,7 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return homeViewModel?.Products?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,8 +58,18 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         }else{
             
             guard let brandsCell = brandsCollectionView.dequeueReusableCell(withReuseIdentifier: "BrandsCollectionViewCell", for: indexPath) as? BrandsCollectionViewCell else {return UICollectionViewCell() }
+            guard let products =  homeViewModel?.Products else {return
+                brandsCell }
+            brandsCell.brandImageView.image = UIImage(named: "Adidas")
+            brandsCell.brandNameLabel.text = products[indexPath.row].vendor
             return brandsCell
             
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: brandsCollectionView.frame.width/2, height: brandsCollectionView.frame.height/2 )
+        
     }
 }

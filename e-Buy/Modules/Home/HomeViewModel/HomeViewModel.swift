@@ -32,7 +32,6 @@ class HomeViewModel {
                 }else{
                     guard let results = result else { return }
                     self?.brands = results.smartcollections
-                    print(results.smartcollections)
                 }
             }
         }

@@ -35,6 +35,8 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         adsCollectionView.dataSource = self
         brandsCollectionView.delegate = self
         brandsCollectionView.dataSource = self
+        
+        brandsCollectionView.layer.cornerRadius = 0.2
     }
     
     func registerCell(){
@@ -67,9 +69,17 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let categoryVC = CategoryViewController(nibName: "CategoryViewController", bundle: nil)
+        let Navigation = UINavigationController(rootViewController: categoryVC)
+        //leaguesVC.leaguesViewModel = LeagueViewModel(sportName: sportVewModel?.sports?[indexPath.row].strSport)
+        
+        self.present(Navigation, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: brandsCollectionView.frame.width/2, height: brandsCollectionView.frame.height/2 )
+        return CGSize(width: UIScreen.main.bounds.width/7, height: UIScreen.main.bounds.height/2 )
         
     }
 }

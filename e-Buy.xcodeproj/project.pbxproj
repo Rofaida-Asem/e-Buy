@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E360E3B2864E73700ADBBE7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E360E392864E73700ADBBE7 /* LoginVC.swift */; };
+		4E360E3C2864E73700ADBBE7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E360E3A2864E73700ADBBE7 /* LoginVC.xib */; };
 		9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257946286231DF0077DF73 /* CategoryViewController.swift */; };
 		9A257949286231DF0077DF73 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A257947286231DF0077DF73 /* CategoryViewController.xib */; };
 		9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25794A286233540077DF73 /* CategoryCollectionViewCell.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		164BE48C4F1F1A39D6316913 /* Pods-e-Buy-e-BuyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy-e-BuyUITests.release.xcconfig"; path = "Target Support Files/Pods-e-Buy-e-BuyUITests/Pods-e-Buy-e-BuyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_Buy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E360E392864E73700ADBBE7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4E360E3A2864E73700ADBBE7 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		9A257946286231DF0077DF73 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		9A257947286231DF0077DF73 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		9A25794A286233540077DF73 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +136,101 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4E360E2D2864866900ADBBE7 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4E360E30286486B200ADBBE7 /* ProductDetailsVM */,
+				4E360E2F2864869C00ADBBE7 /* ProductDetailsView */,
+				4E360E2E2864867800ADBBE7 /* ProductDetailsModels */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		4E360E2E2864867800ADBBE7 /* ProductDetailsModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetailsModels;
+			sourceTree = "<group>";
+		};
+		4E360E2F2864869C00ADBBE7 /* ProductDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetailsView;
+			sourceTree = "<group>";
+		};
+		4E360E30286486B200ADBBE7 /* ProductDetailsVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetailsVM;
+			sourceTree = "<group>";
+		};
+		4E360E312864871A00ADBBE7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4E360E342864894C00ADBBE7 /* LoginModel */,
+				4E360E332864894300ADBBE7 /* LoginView */,
+				4E360E322864892100ADBBE7 /* LoginVM */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4E360E322864892100ADBBE7 /* LoginVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginVM;
+			sourceTree = "<group>";
+		};
+		4E360E332864894300ADBBE7 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4E360E392864E73700ADBBE7 /* LoginVC.swift */,
+				4E360E3A2864E73700ADBBE7 /* LoginVC.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4E360E342864894C00ADBBE7 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		4E360E352864898C00ADBBE7 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4E360E38286489A900ADBBE7 /* RegisterView */,
+				4E360E372864899F00ADBBE7 /* RegisterVM */,
+				4E360E362864899700ADBBE7 /* RegisterModel */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4E360E362864899700ADBBE7 /* RegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterModel;
+			sourceTree = "<group>";
+		};
+		4E360E372864899F00ADBBE7 /* RegisterVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterVM;
+			sourceTree = "<group>";
+		};
+		4E360E38286489A900ADBBE7 /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
 		791184CD9EC2C1E4C28679A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +244,9 @@
 		9A7DDB5D2863971F00E14FDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4E360E352864898C00ADBBE7 /* Register */,
+				4E360E312864871A00ADBBE7 /* Login */,
+				4E360E2D2864866900ADBBE7 /* ProductDetails */,
 				9A7DDB652863985400E14FDA /* Category */,
 				9A7DDB5E2863973300E14FDA /* Home */,
 			);
@@ -446,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E360E3C2864E73700ADBBE7 /* LoginVC.xib in Resources */,
 				9A257949286231DF0077DF73 /* CategoryViewController.xib in Resources */,
 				9A84379D2861ED2600DCE742 /* BrandsCollectionViewCell.xib in Resources */,
 				9A84379E2861ED2600DCE742 /* AdsCollectionViewCell.xib in Resources */,
@@ -584,6 +687,7 @@
 			files = (
 				9A84376A2861EC1000DCE742 /* ViewController.swift in Sources */,
 				9A65FC2728634F48006127FD /* ProductsModel.swift in Sources */,
+				4E360E3B2864E73700ADBBE7 /* LoginVC.swift in Sources */,
 				9A8437662861EC1000DCE742 /* AppDelegate.swift in Sources */,
 				9A84379F2861ED2600DCE742 /* AdsCollectionViewCell.swift in Sources */,
 				9A8437682861EC1000DCE742 /* SceneDelegate.swift in Sources */,

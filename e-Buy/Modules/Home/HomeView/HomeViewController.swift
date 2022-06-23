@@ -46,7 +46,7 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeViewModel?.Products?.count ?? 0
+        return homeViewModel?.brands?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,10 +58,10 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         }else{
             
             guard let brandsCell = brandsCollectionView.dequeueReusableCell(withReuseIdentifier: "BrandsCollectionViewCell", for: indexPath) as? BrandsCollectionViewCell else {return UICollectionViewCell() }
-            guard let products =  homeViewModel?.Products else {return
+            guard let brands =  homeViewModel?.brands else {return
                 brandsCell }
-            brandsCell.brandImageView.image = UIImage(named: "Adidas")
-            brandsCell.brandNameLabel.text = products[indexPath.row].vendor
+            brandsCell.brandImageView.kf.setImage(with: URL(string: brands[indexPath.row].image?.src ?? ""))
+            brandsCell.brandNameLabel.text = brands[indexPath.row].title
             return brandsCell
             
         }

@@ -23,12 +23,12 @@ struct Product: Decodable {
     let publishedScope, tags, adminGraphqlAPIID: String?
     let variants: [Variant]?
     let options: [Option]?
-    let images: [Image]?
-    let image: Image?
+    let images: [ProductImage]?
+    let image: ProductImage?
 }
 
 // MARK: - Image
-struct Image: Decodable {
+struct ProductImage: Decodable {
     let id, productID, position: Int?
     let createdAt, updatedAt: Date?
  //   let alt: NSNull

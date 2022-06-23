@@ -9,7 +9,7 @@ import Foundation
 
 class HomeViewModel {
     
-    var Products: [Product]?{
+    var brands: [SmartCollection]?{
         didSet{
             bindingResult()
         }
@@ -24,14 +24,15 @@ class HomeViewModel {
         
         DispatchQueue.global().async {
             
-            let url = Constants.getProducts_URL()
-            
-            ApiService.shared.getData(url: url) { [weak self] (result : Products?, error) in
+            let url = Constants.getBrands_URL()
+            print(url)
+            ApiService.shared.getData(url: url) { [weak self] (result : Brands?, error) in
                 if let error = error {
                     print(error)
                 }else{
                     guard let results = result else { return }
-                    self?.Products = results.products
+                    self?.brands = results.smartcollections
+                    print(results.smartcollections)
                 }
             }
         }

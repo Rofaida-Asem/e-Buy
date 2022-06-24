@@ -37,8 +37,6 @@
 		A409355028648784001E270D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A409354E28648784001E270D /* SettingsViewController.xib */; };
 		A40935592864930F001E270D /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40935572864930F001E270D /* AddressViewController.swift */; };
 		A409355A2864930F001E270D /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40935582864930F001E270D /* AddressViewController.xib */; };
-		A409355D28649328001E270D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409355B28649328001E270D /* CurrencyViewController.swift */; };
-		A409355E28649328001E270D /* CurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A409355C28649328001E270D /* CurrencyViewController.xib */; };
 		A40935612864933E001E270D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409355F2864933E001E270D /* ContactUsViewController.swift */; };
 		A40935622864933E001E270D /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40935602864933E001E270D /* ContactUsViewController.xib */; };
 		A409356528649356001E270D /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409356328649356001E270D /* AboutUsViewController.swift */; };
@@ -102,8 +100,6 @@
 		A409354E28648784001E270D /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		A40935572864930F001E270D /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		A40935582864930F001E270D /* AddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
-		A409355B28649328001E270D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
-		A409355C28649328001E270D /* CurrencyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyViewController.xib; sourceTree = "<group>"; };
 		A409355F2864933E001E270D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		A40935602864933E001E270D /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		A409356328649356001E270D /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
@@ -341,7 +337,6 @@
 				A409354D28648784001E270D /* SettingsViewController.swift */,
 				A409354E28648784001E270D /* SettingsViewController.xib */,
 				A40935532864927B001E270D /* AddressViewController */,
-				A409355428649295001E270D /* CurrencyViewController */,
 				A4093555286492AA001E270D /* ContactUsViewController */,
 				A4093556286492BD001E270D /* AboutUsViewController */,
 			);
@@ -355,15 +350,6 @@
 				A40935582864930F001E270D /* AddressViewController.xib */,
 			);
 			path = AddressViewController;
-			sourceTree = "<group>";
-		};
-		A409355428649295001E270D /* CurrencyViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A409355B28649328001E270D /* CurrencyViewController.swift */,
-				A409355C28649328001E270D /* CurrencyViewController.xib */,
-			);
-			path = CurrencyViewController;
 			sourceTree = "<group>";
 		};
 		A4093555286492AA001E270D /* ContactUsViewController */ = {
@@ -504,7 +490,6 @@
 				A409356628649356001E270D /* AboutUsViewController.xib in Resources */,
 				9AC79A0928633DC7000B6EAC /* Constants in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
-				A409355E28649328001E270D /* CurrencyViewController.xib in Resources */,
 				A409355028648784001E270D /* SettingsViewController.xib in Resources */,
 				A409355A2864930F001E270D /* AddressViewController.xib in Resources */,
 			);
@@ -645,7 +630,6 @@
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,
 				A409354F28648784001E270D /* SettingsViewController.swift in Sources */,
 				A409354728641B21001E270D /* CoreDataManager.swift in Sources */,
-				A409355D28649328001E270D /* CurrencyViewController.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,
 				A40935592864930F001E270D /* AddressViewController.swift in Sources */,
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,

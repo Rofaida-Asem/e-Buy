@@ -8,17 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    @IBAction func addressButton(_ sender: UIButton) {
-    }
-    @IBAction func currencyButton(_ sender: UIButton) {
-    }
-    @IBAction func contactUsButton(_ sender: UIButton) {
-    }
-    @IBAction func aboutUsButton(_ sender: UIButton) {
-    }
-    @IBAction func logOutButton(_ sender: Any) {
-    }
-    
+   
     
     
     override func viewDidLoad() {
@@ -27,15 +17,32 @@ class SettingsViewController: UIViewController {
         
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addressButton(_ sender: UIButton) {
+        
     }
-    */
+    
+    @IBAction func currencyButton(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Change Currency", message: "What currency do you want ?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "EGP", style: .cancel))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func contactUsButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func aboutUsButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        
+    }
+    
+   
 
 }

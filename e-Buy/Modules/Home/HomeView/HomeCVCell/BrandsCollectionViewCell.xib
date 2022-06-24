@@ -43,7 +43,7 @@
                 <outlet property="brandImageView" destination="XMK-X4-yHV" id="Lpp-zF-Zvd"/>
                 <outlet property="brandNameLabel" destination="C2c-xX-wEN" id="5BF-zM-G46"/>
             </connections>
-            <point key="canvasLocation" x="256.52173913043481" y="52.566964285714285"/>
+            <point key="canvasLocation" x="406" y="86"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -1,15 +1,15 @@
 //
-//  HomeViewModel.swift
+//  CategoryViewModel.swift
 //  e-Buy
 //
-//  Created by Om Malikah  on 23/11/1443 AH.
+//  Created by Om Malikah  on 25/11/1443 AH.
 //
 
 import Foundation
 
-class HomeViewModel {
-    
-    var brands: [SmartCollection]?{
+class CategoryViewModel {
+   // var vendor :String!
+    var product: [Product]?{
         didSet{
             bindingResult()
         }
@@ -17,21 +17,23 @@ class HomeViewModel {
     
     var bindingResult: (()->()) = {}
     init(serviece:ApiService){
-        
+       // self.vendor = vendor
     }
     
     func getData(){
         
         DispatchQueue.global().async {
             
-            let url = Constants.getBrands_URL()
-           
-            ApiService.shared.getData(url: url) { [weak self] (result : Brands?, error) in
+            let url = Constants.getProducts_URL()
+        
+            ApiService.shared.getData(url: url) { [weak self] (result : Products?, error) in
                 if let error = error {
                     print(error)
                 }else{
                     guard let results = result else { return }
-                    self?.brands = results.smartcollections
+                    self?.product = results.products
+                    
+                    
                 }
             }
         }

@@ -28,11 +28,7 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <searchBar contentMode="redraw" placeholder="What are you looking for ?" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8z-UEi">
-                    <rect key="frame" x="0.0" y="88" width="428" height="51"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-gk-h6p">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-gk-h6p">
                     <rect key="frame" x="0.0" y="139" width="428" height="753"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ogp-Bd-eiB">
@@ -42,20 +38,40 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-6F-idx">
+                    <rect key="frame" x="136" y="100" width="67" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-nF-TUP">
+                    <rect key="frame" x="233" y="100" width="67" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqq-iI-b4m">
+                    <rect key="frame" x="27" y="100" width="67" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-Hj-bpg">
+                    <rect key="frame" x="334" y="100" width="67" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7Tn-Wj-eNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2R1-Mj-KOV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QEW-gk-h6p" secondAttribute="bottom" id="AAA-ci-ia9"/>
-                <constraint firstItem="8vi-8z-UEi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HkZ-DE-luI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="7Tn-Wj-eNt" secondAttribute="top" id="Spo-BE-Y0A"/>
                 <constraint firstItem="QEW-gk-h6p" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bCK-Ef-Cys"/>
                 <constraint firstItem="QEW-gk-h6p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dcM-4D-jea"/>
-                <constraint firstItem="8vi-8z-UEi" firstAttribute="top" secondItem="7Tn-Wj-eNt" secondAttribute="bottom" id="eJb-Hc-pOl"/>
-                <constraint firstItem="QEW-gk-h6p" firstAttribute="top" secondItem="8vi-8z-UEi" secondAttribute="bottom" id="fYK-jX-BKp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Tn-Wj-eNt" secondAttribute="trailing" id="lrf-VC-Xhc"/>
-                <constraint firstItem="8vi-8z-UEi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mAR-Dq-0uj"/>
             </constraints>
             <point key="canvasLocation" x="346" y="95"/>
         </view>

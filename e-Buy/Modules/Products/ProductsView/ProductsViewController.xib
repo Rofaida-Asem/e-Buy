@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="e_Buy" customModuleProvider="target">
+            <connections>
+                <outlet property="productsCollectionView" destination="LD6-VA-eeg" id="Pwr-Mt-wbb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prf-vm-AsF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Products" id="2DJ-cE-8ef">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="cart" catalog="system" id="gf0-QP-gwn">
+                                <connections>
+                                    <action selector="cartButton:" destination="-1" id="MnN-YW-2ug"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="U5c-yf-UGr">
+                                <connections>
+                                    <action selector="favoriteButton:" destination="-1" id="3vA-o6-YXX"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-fy-css">
+                    <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LD6-VA-eeg">
+                    <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rJO-2K-XCH">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Yfy-fy-css" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2NX-21-w4v"/>
+                <constraint firstItem="prf-vm-AsF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5MQ-Ff-ZRo"/>
+                <constraint firstItem="prf-vm-AsF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8GP-1d-dNh"/>
+                <constraint firstItem="LD6-VA-eeg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F4S-nY-C0A"/>
+                <constraint firstItem="LD6-VA-eeg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MvK-0I-hKP"/>
+                <constraint firstItem="LD6-VA-eeg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RkB-13-KJ4"/>
+                <constraint firstItem="LD6-VA-eeg" firstAttribute="top" secondItem="Yfy-fy-css" secondAttribute="bottom" id="WJM-rK-Waq"/>
+                <constraint firstItem="prf-vm-AsF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nDu-V6-CiM"/>
+                <constraint firstItem="Yfy-fy-css" firstAttribute="top" secondItem="prf-vm-AsF" secondAttribute="bottom" id="ovA-95-XlN"/>
+                <constraint firstItem="Yfy-fy-css" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tRg-J0-eaA"/>
+            </constraints>
+            <point key="canvasLocation" x="492.75362318840581" y="39.508928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

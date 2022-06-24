@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBAction func button(_ sender: Any) {
         
         let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
         
     }

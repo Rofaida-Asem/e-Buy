@@ -27,7 +27,6 @@
 		9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */; };
 		9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A897D5F2861EDB9000CE5F4 /* ApiService.swift */; };
 		9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8500128622E180010931F /* Launch Screen.storyboard */; };
-		9AC79A0928633DC7000B6EAC /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 9AC79A0828633DC7000B6EAC /* Constants */; };
 		A409353C28634877001E270D /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409353B28634877001E270D /* ProductsModel.swift */; };
 		A409353F286417AC001E270D /* ErrorMsgHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409353E286417AC001E270D /* ErrorMsgHandler.swift */; };
 		A409354528641A91001E270D /* e-BuyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A409354328641A91001E270D /* e-BuyCoreDataModel.xcdatamodeld */; };
@@ -41,6 +40,9 @@
 		A40935622864933E001E270D /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40935602864933E001E270D /* ContactUsViewController.xib */; };
 		A409356528649356001E270D /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409356328649356001E270D /* AboutUsViewController.swift */; };
 		A409356628649356001E270D /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A409356428649356001E270D /* AboutUsViewController.xib */; };
+		A409356D2865FD44001E270D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409356C2865FD44001E270D /* Constants.swift */; };
+		A40935702865FD83001E270D /* CurrenctiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409356F2865FD83001E270D /* CurrenctiesModel.swift */; };
+		A40935722865FE6A001E270D /* CurrenciesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40935712865FE6A001E270D /* CurrenciesContract.swift */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
 		EAF96F968974B109890FF96F /* Pods_e_Buy_e_BuyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D187ED948896E64B645D205B /* Pods_e_Buy_e_BuyUITests.framework */; };
 		ECB6C19348B93E0E98ABD62D /* Pods_e_BuyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */; };
@@ -90,7 +92,6 @@
 		9A84379A2861ED2600DCE742 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A897D5F2861EDB9000CE5F4 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9AA8500128622E180010931F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		9AC79A0828633DC7000B6EAC /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
 		A409353B28634877001E270D /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		A409353E286417AC001E270D /* ErrorMsgHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMsgHandler.swift; sourceTree = "<group>"; };
 		A409354428641A91001E270D /* e-BuyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "e-BuyCoreDataModel.xcdatamodel"; sourceTree = "<group>"; };
@@ -104,6 +105,9 @@
 		A40935602864933E001E270D /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		A409356328649356001E270D /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		A409356428649356001E270D /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		A409356C2865FD44001E270D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A409356F2865FD83001E270D /* CurrenctiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenctiesModel.swift; sourceTree = "<group>"; };
+		A40935712865FE6A001E270D /* CurrenciesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesContract.swift; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68D2F7712ABB3AE359C0A8E /* Pods-e-Buy-e-BuyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy-e-BuyUITests.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy-e-BuyUITests/Pods-e-Buy-e-BuyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB41E51C6350789018C3B04F /* Pods-e-Buy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy/Pods-e-Buy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,10 +193,10 @@
 		9A8437642861EC1000DCE742 /* e-Buy */ = {
 			isa = PBXGroup;
 			children = (
+				A409356B2865FD2A001E270D /* Constants */,
 				A409354C28642144001E270D /* Application */,
 				A409354028641A30001E270D /* CoreData */,
 				A409353D28641785001E270D /* Utilities */,
-				9AC79A0828633DC7000B6EAC /* Constants */,
 				9A897D5E2861ED8A000CE5F4 /* NetworkManager */,
 				9A897D5D2861ED76000CE5F4 /* ViewModel */,
 				9A897D5C2861ED70000CE5F4 /* Model */,
@@ -244,6 +248,7 @@
 		9A897D5C2861ED70000CE5F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A409356E2865FD69001E270D /* Currencies */,
 				A409354928641BF8001E270D /* CartItemModel */,
 				A409354828641BDD001E270D /* ProductsModel */,
 			);
@@ -370,6 +375,23 @@
 			path = AboutUsViewController;
 			sourceTree = "<group>";
 		};
+		A409356B2865FD2A001E270D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A409356C2865FD44001E270D /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A409356E2865FD69001E270D /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				A40935712865FE6A001E270D /* CurrenciesContract.swift */,
+				A409356F2865FD83001E270D /* CurrenctiesModel.swift */,
+			);
+			path = Currencies;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -488,7 +510,6 @@
 				9A84376D2861EC1000DCE742 /* Main.storyboard in Resources */,
 				9A84379B2861ED2600DCE742 /* HomeViewController.xib in Resources */,
 				A409356628649356001E270D /* AboutUsViewController.xib in Resources */,
-				9AC79A0928633DC7000B6EAC /* Constants in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
 				A409355028648784001E270D /* SettingsViewController.xib in Resources */,
 				A409355A2864930F001E270D /* AddressViewController.xib in Resources */,
@@ -620,6 +641,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A84376A2861EC1000DCE742 /* ViewController.swift in Sources */,
+				A40935702865FD83001E270D /* CurrenctiesModel.swift in Sources */,
+				A409356D2865FD44001E270D /* Constants.swift in Sources */,
 				A409354528641A91001E270D /* e-BuyCoreDataModel.xcdatamodeld in Sources */,
 				9A8437662861EC1000DCE742 /* AppDelegate.swift in Sources */,
 				A409353C28634877001E270D /* ProductsModel.swift in Sources */,
@@ -630,6 +653,7 @@
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,
 				A409354F28648784001E270D /* SettingsViewController.swift in Sources */,
 				A409354728641B21001E270D /* CoreDataManager.swift in Sources */,
+				A40935722865FE6A001E270D /* CurrenciesContract.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,
 				A40935592864930F001E270D /* AddressViewController.swift in Sources */,
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,

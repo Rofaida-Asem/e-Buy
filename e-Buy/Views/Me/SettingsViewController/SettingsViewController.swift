@@ -29,20 +29,23 @@ class SettingsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
             
         }))
-        alert.addAction(UIAlertAction(title: "EGP", style: .cancel))
+        alert.addAction(UIAlertAction(title: "EUR", style: .default, handler: { [self] _ in
+            <#code#>
+        }))
         present(alert, animated: true, completion: nil)
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {
-        let contactUsViewController = self.storyboard?.instantiateViewController(withIdentifier: "ContactUsViewController") as! ContactUsViewController
+        let contactUsViewController = ContactUsViewController(nibName: "ContactUsViewController", bundle: .main)
         contactUsViewController.modalPresentationStyle = .fullScreen
-        self.present(contactUsViewController, animated: true)
+        presentingViewController?.present(contactUsViewController, animated: true)
+
     }
     
     @IBAction func aboutUsButton(_ sender: UIButton) {
-        let aboutUsViewController = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+        let aboutUsViewController = AboutUsViewController(nibName: "AboutUsViewController", bundle: .main)
         aboutUsViewController.modalPresentationStyle = .fullScreen
-        self.present(aboutUsViewController, animated: true)
+        presentingViewController?.present(aboutUsViewController, animated: true)
     }
     
     @IBAction func logOutButton(_ sender: Any) {

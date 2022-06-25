@@ -14,6 +14,9 @@ class BrandsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        brandImageView.layer.cornerRadius = 10.0
+        brandImageView.layer.borderColor = UIColor.purple.cgColor
+        brandImageView.layer.borderWidth = 1.0
     }
 
 }

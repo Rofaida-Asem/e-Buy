@@ -9,7 +9,7 @@ import Foundation
 
 class ProductsViewModel {
     // var vendor :String!
-    var product: [Product]?{
+    var products: [Product]?{
         didSet{
             bindingResult()
         }
@@ -20,7 +20,7 @@ class ProductsViewModel {
         // self.vendor = vendor
     }
     
-    func getData(){
+    func getData(forBrand brand: String){
         
         DispatchQueue.global().async {
             
@@ -31,8 +31,13 @@ class ProductsViewModel {
                     print(error)
                 }else{
                     guard let results = result else { return }
-                    self?.product = results.products
+                    self?.products = results.products?.filter({$0.vendor == brand})
                     
+//                    let subCategories = Set(results.products?.compactMap({$0.vendor}) ?? [])
+//
+//                    Collection [=] = = = =
+//                    suncollection  - [-] - -
+//                    0 0 0 0 0 0 0 0 0 00
                 }
             }
         }

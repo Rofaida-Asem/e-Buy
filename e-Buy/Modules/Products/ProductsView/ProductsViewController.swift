@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProductsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
     var productsViewModel: ProductsViewModel?
+    var barnd: String!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -22,43 +23,67 @@ class ProductsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 self?.productsCollectionView.reloadData()
             }
         }
-        productsViewModel?.getData()
+        productsViewModel?.getData(forBrand: barnd)
+        setupNavigationItems()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
+        title = barnd
+        
     }
     
     func registerCell(){
         let categoryCell = UINib(nibName: "CategoryCollectionViewCell", bundle: nil)
         self.productsCollectionView.register(categoryCell, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
     }
-
-    @IBAction func favoriteButton(_ sender: UIBarButtonItem) {
+    
+    func setupNavigationItems() {
+        
+        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favoTapped))
+        let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartTapped))
+        favButton.tintColor = .purple
+        cartButton.tintColor = .purple
+        
+        navigationItem.setRightBarButtonItems([favButton,cartButton], animated: false)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        navigationController?.navigationBar.tintColor = .purple
     }
     
-    @IBAction func cartButton(_ sender: UIBarButtonItem) {
+    @objc
+    private func favoTapped() {
+        print("like tapped!!")
+    }
+    
+    @objc
+    private func cartTapped() {
+        print("cart tapped!!")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        productsViewModel?.product?.count ?? 0
+        productsViewModel?.products?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let categoryCell = productsCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell() }
-        guard let products =  productsViewModel?.product else {return
+        guard let products =  productsViewModel?.products else {return
             categoryCell }
         categoryCell.categoryImageView.kf.setImage(with: URL(string: products[indexPath.row].image?.src ?? ""))
-      //  categoryCell.priceLabel.text = products[indexPath.row].variants
+        categoryCell.priceLabel.text = products[indexPath.row].variants?.first?.price
+        
         
         
         return categoryCell
     }
-   
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width/3, height: collectionView.frame.height/3)
+    }
 }
 

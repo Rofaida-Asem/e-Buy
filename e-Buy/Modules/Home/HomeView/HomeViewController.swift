@@ -8,17 +8,16 @@
 import UIKit
 import Kingfisher
 
-class HomeViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
+class HomeViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
-    @IBOutlet weak var cartButton: UIBarButtonItem!
     @IBOutlet weak var adsCollectionView: UICollectionView!
-    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     @IBOutlet weak var brandsCollectionView: UICollectionView!
+    @IBOutlet weak var brandLabel: UILabel!
     
     var homeViewModel: HomeViewModel?
-
+    
     override func viewWillAppear(_ animated: Bool) {
-        registerCell()
+        
         homeViewModel = HomeViewModel(serviece: ApiService())
         homeViewModel?.bindingResult = { [weak self] in
             DispatchQueue.main.async {
@@ -26,11 +25,13 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
             }
         }
         homeViewModel?.getData()
+        setupNavigationItems()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCell()
+        registerAdsCell()
+        registerBrandsCell()
         adsCollectionView.delegate = self
         adsCollectionView.dataSource = self
         brandsCollectionView.delegate = self
@@ -38,27 +39,63 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         
         adsCollectionView.layer.borderWidth = 2.0
         adsCollectionView.layer.cornerRadius = 20.0
+        adsCollectionView.layer.borderColor = UIColor.purple.cgColor
         brandsCollectionView.layer.borderWidth = 2.0
         brandsCollectionView.layer.cornerRadius = 20.0
+        brandsCollectionView.layer.borderColor = UIColor.purple.cgColor
+        brandLabel.textColor = UIColor.purple
+        
+        title = "Home"
+    }
+    
+    func registerAdsCell(){
+        let adsCell = UINib(nibName: "AdsCollectionViewCell", bundle: nil)
+        self.adsCollectionView.register(adsCell, forCellWithReuseIdentifier: "AdsCollectionViewCell")
         
     }
     
-    func registerCell(){
-        let adsCell = UINib(nibName: "AdsCollectionViewCell", bundle: nil)
-        self.adsCollectionView.register(adsCell, forCellWithReuseIdentifier: "AdsCollectionViewCell")
+    func registerBrandsCell(){
         
         let brandsCell = UINib(nibName: "BrandsCollectionViewCell", bundle: nil)
         self.brandsCollectionView.register(brandsCell, forCellWithReuseIdentifier: "BrandsCollectionViewCell")
     }
     
+    func setupNavigationItems() {
+        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favoTapped))
+        let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartTapped))
+        favButton.tintColor = .purple
+        cartButton.tintColor = .purple
+        
+        navigationItem.setRightBarButtonItems([favButton], animated: false)
+        navigationItem.setLeftBarButtonItems([cartButton], animated: false)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        
+        
+    }
+    
+    @objc
+    private func favoTapped() {
+        print("fav tapped!!")
+    }
+    @objc
+    private func cartTapped() {
+        print("cart tapped!!")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeViewModel?.brands?.count ?? 0
+        if collectionView == brandsCollectionView {
+            return homeViewModel?.brands?.count ?? 0
+        }else{
+            return 4
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == adsCollectionView {
             
             guard let adsCell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdsCollectionViewCell", for: indexPath) as? AdsCollectionViewCell else {return UICollectionViewCell() }
+            adsCell.adsImageView.image = UIImage(named: "Adidas")
+            
             return adsCell
             
         }else{
@@ -74,16 +111,29 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let producrVC = ProductsViewController(nibName: "ProductsViewController", bundle: nil)
-        //let Navigation = UINavigationController(rootViewController: producrVC)
-
-        producrVC.modalPresentationStyle = .fullScreen
-        self.present(producrVC, animated: true)
+        if collectionView == adsCollectionView {
+            
+        }else{
+            let productVC = ProductsViewController(nibName: "ProductsViewController", bundle: nil)
+            productVC.barnd = homeViewModel?.brands?[indexPath.row].title ?? "ADIDAS"
+            navigationController?.pushViewController(productVC, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: brandsCollectionView.frame.width/4, height: brandsCollectionView.frame.height/4 )
-        
+        if collectionView == adsCollectionView {
+            return CGSize(width: adsCollectionView.frame.width/1, height: adsCollectionView.frame.height/1 )
+            
+        }else{
+            return CGSize(width: brandsCollectionView.frame.width/2-20, height: brandsCollectionView.frame.height/2-20 )
+        }
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == adsCollectionView {
+            return 0
+        }else{
+            return 20
+        }
+    }
+    
 }

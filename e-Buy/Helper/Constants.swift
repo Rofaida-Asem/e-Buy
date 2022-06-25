@@ -16,6 +16,7 @@ class Constants {
     private static let smartCollection = "/smart_collections.json"
     private static let products = "/products.json"
     private static let custemCollections = "/custom_collections.json"
+    private static let collections = "/collections"
     
     class func getBrands_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.smartCollection
@@ -28,11 +29,17 @@ class Constants {
     class func getCustomCollection_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.custemCollections
     }
+    
+    class func getMinCategory_URL(collectionId: Int) -> String {
+        return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.collections + ("/\(collectionId)") + Constants.products
+    }
 }
 
 // let smartCollection = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/smart_collections/286861033643.json"
 
 // let custonCollection = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/custom_collections.json"
+
+// let customCollectionWithIdCollection = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/collections/286861394091/products.json"
 
 //let productsURL = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/products.json"
 //

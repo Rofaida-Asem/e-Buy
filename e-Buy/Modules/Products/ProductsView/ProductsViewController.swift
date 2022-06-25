@@ -76,8 +76,6 @@ class ProductsViewController: UIViewController, UICollectionViewDelegate, UIColl
         categoryCell.categoryImageView.kf.setImage(with: URL(string: products[indexPath.row].image?.src ?? ""))
         categoryCell.priceLabel.text = products[indexPath.row].variants?.first?.price
         
-        
-        
         return categoryCell
     }
     

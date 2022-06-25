@@ -59,7 +59,7 @@
                 <outlet property="favotiteButton" destination="Q13-zg-N7O" id="fPg-DV-4VT"/>
                 <outlet property="priceLabel" destination="W7E-mm-bsb" id="H3T-LS-XY2"/>
             </connections>
-            <point key="canvasLocation" x="25" y="110"/>
+            <point key="canvasLocation" x="24.637681159420293" y="109.48660714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

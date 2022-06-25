@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - MainCategory
 struct MainCategory: Decodable {
-    let customCollections: [CustomCollection]
+    let customcollections: [CustomCollection]
     
-    enum CodingKeyss: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case customcollections = "custom_collections"
     }
 }

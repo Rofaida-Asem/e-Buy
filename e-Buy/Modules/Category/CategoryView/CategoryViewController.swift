@@ -12,7 +12,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var mainCategoryCollectionView: UICollectionView!
     
     var categoryViewModel: CategoryViewModel?
-    
+    var id : Int = 286861459627
     override func viewWillAppear(_ animated: Bool) {
         
         registerCell()
@@ -30,15 +30,14 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
         
-        categoryViewModel?.getData()
         categoryViewModel?.getMainCategory()
+        categoryViewModel?.getData(byCollectionId: id )
         setupNavigationItems()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        registerMainCategoryCell()
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         mainCategoryCollectionView.delegate = self
@@ -50,9 +49,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func registerCell(){
         let categoryCell = UINib(nibName: "CategoryCollectionViewCell", bundle: nil)
         self.categoryCollectionView.register(categoryCell, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
-    }
-    func registerMainCategoryCell(){
-        
         let mainCategoryCell = UINib(nibName: "MainCategoryCollectionViewCell", bundle: nil)
         self.mainCategoryCollectionView.register(mainCategoryCell, forCellWithReuseIdentifier: "MainCategoryCollectionViewCell")
     }
@@ -82,7 +78,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         if collectionView == categoryCollectionView {
             return categoryViewModel?.product?.count ?? 0
         }else{
-            return (categoryViewModel?.custemCollection?.count ?? 3 ) - 1
+            return (categoryViewModel?.custemCollection?.count ?? 0 ) - 1
         }
     }
     
@@ -93,23 +89,34 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             guard let products =  categoryViewModel?.product else {return
                 categoryCell }
             categoryCell.categoryImageView.kf.setImage(with: URL(string: products[indexPath.row].image?.src ?? ""))
-            //  categoryCell.priceLabel.text = products[indexPath.row].variants
-            
+            categoryCell.priceLabel.text = products[indexPath.row].variants?.first?.price 
             
             return categoryCell
         }else{
             guard let mainCategoryCell = mainCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCollectionViewCell", for: indexPath) as? MainCategoryCollectionViewCell else {return UICollectionViewCell() }
-            mainCategoryCell.mainCategoryLabel.text = categoryViewModel?.custemCollection?.first?.title
+            mainCategoryCell.mainCategoryLabel.text = categoryViewModel?.custemCollection?[indexPath.row+1].title
             return mainCategoryCell
         }
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            
+        }else{
+            id = categoryViewModel?.custemCollection?[indexPath.row+1].id ?? 0
+            categoryViewModel?.getData(byCollectionId: id)
+            
+            let categoryCell = CategoryCollectionViewCell()
+           // print(categoryCell.priceLabel?.text ?? "uu" )
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == categoryCollectionView {
-            return CGSize(width: collectionView.frame.width/3, height: collectionView.frame.height/3)
+            return CGSize(width: categoryCollectionView.frame.width/3, height: categoryCollectionView.frame.height/3)
         }else{
-            return CGSize(width: collectionView.frame.width/4, height: collectionView.frame.height/1)
+            return CGSize(width: mainCategoryCollectionView.frame.width/4, height: mainCategoryCollectionView.frame.height/1)
         }
     }
     

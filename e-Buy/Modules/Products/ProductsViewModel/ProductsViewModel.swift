@@ -33,11 +33,6 @@ class ProductsViewModel {
                     guard let results = result else { return }
                     self?.products = results.products?.filter({$0.vendor == brand})
                     
-//                    let subCategories = Set(results.products?.compactMap({$0.vendor}) ?? [])
-//
-//                    Collection [=] = = = =
-//                    suncollection  - [-] - -
-//                    0 0 0 0 0 0 0 0 0 00
                 }
             }
         }

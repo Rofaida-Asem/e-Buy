@@ -15,16 +15,28 @@ struct Products: Decodable {
 // MARK: - Product
 struct Product: Decodable {
     let id: Int?
-    let title, bodyHTML, vendor, productType: String?
-    let createdAt: Date?
-    let handle: String?
-    let updatedAt, publishedAt: Date?
-  //  let templateSuffix: NSNull?
-    let publishedScope, tags, adminGraphqlAPIID: String?
+    let title, vendor: String?
+    let productType: String
+    //    let createdAt: Date?
+    //    let handle: String?
+    //    let updatedAt, publishedAt: Date?
+    //    let templateSuffix: NSNull?
+    //    let publishedScope, tags, adminGraphqlAPIID: String?
     let variants: [Variant]?
     let options: [Option]?
     let images: [ProductImage]?
     let image: ProductImage?
+    
+    enum CodingKeys: String, CodingKey {
+        case productType = "product_type"
+        case title = "title"
+        case vendor = "vendor"
+        case variants = "variants"
+        case images = "images"
+        case image = "image"
+        case options = "options"
+        case id = "id"
+    }
 }
 
 // MARK: - Image

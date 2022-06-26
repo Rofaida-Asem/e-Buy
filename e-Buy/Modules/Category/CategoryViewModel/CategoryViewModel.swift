@@ -8,7 +8,7 @@
 import Foundation
 
 class CategoryViewModel {
-    // var vendor :String!
+  
     var product: [Product]?{
         didSet{
             bindingResultProducts()
@@ -21,10 +21,17 @@ class CategoryViewModel {
         }
     }
     
+    var subProducets: [Product]?{
+        didSet{
+            bindingSubCategories()
+        }
+    }
+    
     var bindingResultProducts: (()->()) = {}
     var bindingCustomCollection: (()->()) = {}
+    var bindingSubCategories: (()->()) = {}
     init(serviece:ApiService){
-        // self.vendor = vendor
+        
     }
     
     func getData(byCollectionId id: Int){
@@ -48,16 +55,35 @@ class CategoryViewModel {
         
         DispatchQueue.global().async {
             
-            let customCollectionUrl = Constants.getCustomCollection_URL()
+            let url = Constants.getCustomCollection_URL()
             
-            ApiService.shared.getData(url: customCollectionUrl) { [weak self] (result : MainCategory?, error) in
+            ApiService.shared.getData(url: url) { [weak self] (result : MainCategory?, error) in
                 if let error = error {
                     print(error)
                 }else{
                     guard let results = result else { return }
                     self?.custemCollection = results.customcollections
+                    
                 }
             }
+        }
+    }
+    
+    func getSubCategory(byProductType currentType: String){
+        DispatchQueue.global().async {
+            
+            let url = Constants.getProducts_URL()
+            ApiService.shared.getData(url: url) { [weak self] (results : Products?, error) in
+                if let error = error {
+                    print(error)
+                }else{
+                    guard let results = results else { return }
+                    self?.product = results.products?.filter({$0.productType == currentType})
+//                    let subCategories = Set(results.products?.compactMap({$0.productType}) ?? [])
+//                    print(subCategories)
+                }
+            }
+            
         }
     }
 }

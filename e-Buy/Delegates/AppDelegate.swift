@@ -39,7 +39,5 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.backgroundColor = .purple
         tabBar.tintColor = .white
-       // tabBar.items?[1] = UITabBarItem(title: "Category", image: UIImage(systemName: "house"), tag: 1)
-   //     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
     }
 }

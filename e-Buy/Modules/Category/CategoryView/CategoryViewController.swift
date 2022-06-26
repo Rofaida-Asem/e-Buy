@@ -11,20 +11,24 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var mainCategoryCollectionView: UICollectionView!
     @IBOutlet weak var subCategoryCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     
     var categoryViewModel: CategoryViewModel?
     var id : Int = 286861459627
+    var mainCategoryArray = ["Kids","Men","Sale","Women"]
     var subCategoryArray = ["SHOES","T-SHIRTS","ACCESSORIES"]
     var currentType : String = "SHOES"
     
     override func viewWillAppear(_ animated: Bool) {
         
         registerCell()
+        activityIndicatorView.startAnimating()
         categoryViewModel = CategoryViewModel(serviece: ApiService())
         categoryViewModel?.bindingResultProducts = { [weak self] in
             DispatchQueue.main.async {
                 self?.categoryCollectionView.reloadData()
+                self?.activityIndicatorView.isHidden = true
             }
         }
         
@@ -92,7 +96,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         if collectionView == categoryCollectionView {
             return categoryViewModel?.product?.count ?? 0
         }else if collectionView == mainCategoryCollectionView {
-            return (categoryViewModel?.custemCollection?.count ?? 0 ) - 1
+            return mainCategoryArray.count
         }else{
             return subCategoryArray.count
         }
@@ -110,7 +114,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             return categoryCell
         }else if collectionView == mainCategoryCollectionView {
             guard let mainCategoryCell = mainCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCollectionViewCell", for: indexPath) as? MainCategoryCollectionViewCell else {return UICollectionViewCell() }
-            mainCategoryCell.mainCategoryLabel.text = categoryViewModel?.custemCollection?[indexPath.row+1].title
+            mainCategoryCell.mainCategoryLabel.text = mainCategoryArray[indexPath.row]
             return mainCategoryCell
         }else{
             guard let subCategoryCell = subCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "SubCategoryCollectionViewCell", for: indexPath) as? SubCategoryCollectionViewCell else {return UICollectionViewCell() }
@@ -132,8 +136,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         }else if collectionView == subCategoryCollectionView {
             currentType = subCategoryArray[indexPath.row]
             categoryViewModel?.getSubCategory(byProductType: currentType)
-            //   let subCategory = SubCategoryCollectionViewCell()
-           
         }
     }
     

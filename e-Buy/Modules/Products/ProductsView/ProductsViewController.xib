@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="e_Buy" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="GoT-yd-hTs" id="1tk-l6-iW4"/>
                 <outlet property="productsCollectionView" destination="LD6-VA-eeg" id="Pwr-Mt-wbb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,16 +34,21 @@
                         <inset key="sectionInset" minX="40" minY="10" maxX="40" maxY="10"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-yd-hTs">
+                    <rect key="frame" x="197" y="468.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2NX-21-w4v"/>
+                <constraint firstItem="GoT-yd-hTs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="61S-Qo-oCw"/>
                 <constraint firstItem="LD6-VA-eeg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F4S-nY-C0A"/>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MsY-Fh-jGI"/>
                 <constraint firstItem="LD6-VA-eeg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MvK-0I-hKP"/>
                 <constraint firstItem="LD6-VA-eeg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RkB-13-KJ4"/>
                 <constraint firstItem="LD6-VA-eeg" firstAttribute="top" secondItem="Yfy-fy-css" secondAttribute="bottom" id="WJM-rK-Waq"/>
+                <constraint firstItem="GoT-yd-hTs" firstAttribute="centerY" secondItem="LD6-VA-eeg" secondAttribute="centerY" id="XvP-Hi-emv"/>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tRg-J0-eaA"/>
             </constraints>
             <point key="canvasLocation" x="492.75362318840581" y="39.508928571428569"/>

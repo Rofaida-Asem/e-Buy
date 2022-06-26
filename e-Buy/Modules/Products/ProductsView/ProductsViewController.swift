@@ -10,6 +10,7 @@ import UIKit
 class ProductsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var productsViewModel: ProductsViewModel?
     var barnd: String!
@@ -17,10 +18,12 @@ class ProductsViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewWillAppear(_ animated: Bool) {
         
         registerCell()
+        activityIndicatorView.startAnimating()
         productsViewModel = ProductsViewModel(serviece: ApiService())
         productsViewModel?.bindingResult = { [weak self] in
             DispatchQueue.main.async {
                 self?.productsCollectionView.reloadData()
+                self?.activityIndicatorView.isHidden = true
             }
         }
         productsViewModel?.getData(forBrand: barnd)

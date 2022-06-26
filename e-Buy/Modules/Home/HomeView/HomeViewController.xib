@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="e_Buy" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="gzI-Um-ENe" id="qey-2w-cGX"/>
                 <outlet property="adsCollectionView" destination="IYU-uM-Dym" id="UVV-Wg-eVl"/>
                 <outlet property="brandLabel" destination="pC1-F3-IXO" id="nHS-4f-AUE"/>
                 <outlet property="brandsCollectionView" destination="p9E-F3-fnx" id="1sa-NU-SJU"/>
@@ -60,12 +61,17 @@
                         <constraint firstItem="pC1-F3-IXO" firstAttribute="trailing" secondItem="IYU-uM-Dym" secondAttribute="trailing" id="iWA-6G-bPH"/>
                     </constraints>
                 </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gzI-Um-ENe">
+                    <rect key="frame" x="204" y="522.66666666666663" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pO7-sf-fGw" secondAttribute="trailing" constant="20" id="0yW-FP-nf1"/>
+                <constraint firstItem="gzI-Um-ENe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4nh-hv-7Qc"/>
                 <constraint firstItem="pO7-sf-fGw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="6H0-FV-O7V"/>
+                <constraint firstItem="gzI-Um-ENe" firstAttribute="centerY" secondItem="p9E-F3-fnx" secondAttribute="centerY" id="AZa-uC-dwh"/>
                 <constraint firstItem="pC1-F3-IXO" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0309575" id="RRx-KY-HEF"/>
                 <constraint firstItem="pO7-sf-fGw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dVf-1k-sTx"/>
                 <constraint firstItem="IYU-uM-Dym" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.205357" id="qlH-Kj-c4H"/>

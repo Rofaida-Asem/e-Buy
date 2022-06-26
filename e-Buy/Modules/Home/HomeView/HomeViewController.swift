@@ -13,15 +13,18 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     @IBOutlet weak var adsCollectionView: UICollectionView!
     @IBOutlet weak var brandsCollectionView: UICollectionView!
     @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var homeViewModel: HomeViewModel?
     
     override func viewWillAppear(_ animated: Bool) {
         
+        activityIndicatorView.startAnimating()
         homeViewModel = HomeViewModel(serviece: ApiService())
         homeViewModel?.bindingResult = { [weak self] in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self?.brandsCollectionView.reloadData()
+                self?.activityIndicatorView.isHidden = true
             }
         }
         homeViewModel?.getData()
@@ -44,7 +47,6 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         brandsCollectionView.layer.cornerRadius = 20.0
         brandsCollectionView.layer.borderColor = UIColor.purple.cgColor
         brandLabel.textColor = UIColor.purple
-        
         title = "Home"
     }
     

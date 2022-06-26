@@ -156,7 +156,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         }else if collectionView == subCategoryCollectionView {
             
             guard let label = (subCategoryCollectionView.cellForItem(at: indexPath) as! SubCategoryCollectionViewCell).subCategoryLabel else {return}
-            label.textColor = .black
+            label.textColor = .darkGray
             
         }
     }
@@ -164,8 +164,10 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == categoryCollectionView {
             return CGSize(width: categoryCollectionView.frame.width/3, height: categoryCollectionView.frame.height/3)
-        }else{
+        }else if collectionView == mainCategoryCollectionView {
             return CGSize(width: mainCategoryCollectionView.frame.width/4, height: mainCategoryCollectionView.frame.height/1)
+        }else{
+            return CGSize(width: subCategoryCollectionView.frame.width/4, height: subCategoryCollectionView.frame.height/1)
         }
     }
     

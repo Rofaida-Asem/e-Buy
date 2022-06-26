@@ -120,7 +120,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             guard let subCategoryCell = subCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "SubCategoryCollectionViewCell", for: indexPath) as? SubCategoryCollectionViewCell else {return UICollectionViewCell() }
             
             subCategoryCell.subCategoryLabel.text = subCategoryArray[indexPath.row]
-            
             return subCategoryCell
         }
         
@@ -132,10 +131,33 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         }else if collectionView == mainCategoryCollectionView {
             id = categoryViewModel?.custemCollection?[indexPath.row+1].id ?? 0
             categoryViewModel?.getData(byCollectionId: id)
+          
+            guard let label = (mainCategoryCollectionView.cellForItem(at: indexPath) as! MainCategoryCollectionViewCell).mainCategoryLabel else {return}
+            label.textColor = .white
             
         }else if collectionView == subCategoryCollectionView {
             currentType = subCategoryArray[indexPath.row]
             categoryViewModel?.getSubCategory(byProductType: currentType)
+            
+            guard let label = (subCategoryCollectionView.cellForItem(at: indexPath) as! SubCategoryCollectionViewCell).subCategoryLabel else {return}
+            label.textColor = .purple
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            
+        }else if collectionView == mainCategoryCollectionView {
+    
+            
+            guard let label = (mainCategoryCollectionView.cellForItem(at: indexPath) as! MainCategoryCollectionViewCell).mainCategoryLabel else {return}
+            label.textColor = .purple
+            
+        }else if collectionView == subCategoryCollectionView {
+            
+            guard let label = (subCategoryCollectionView.cellForItem(at: indexPath) as! SubCategoryCollectionViewCell).subCategoryLabel else {return}
+            label.textColor = .black
+            
         }
     }
     

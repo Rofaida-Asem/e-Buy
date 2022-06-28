@@ -238,6 +238,7 @@
 		9A897D5B2861ED52000CE5F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A436F711286AD4C700D23A1B /* Payment */,
 				A48E76CF2869F26C00FA3EFE /* ShoppingCart */,
 				A4093551286491B3001E270D /* Me */,
 				9A8437962861ED2600DCE742 /* HomeViewController.swift */,
@@ -398,6 +399,29 @@
 				A409356F2865FD83001E270D /* CurrenctiesModel.swift */,
 			);
 			path = Currencies;
+			sourceTree = "<group>";
+		};
+		A436F711286AD4C700D23A1B /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				A436F712286AD4D500D23A1B /* PaymentController */,
+				A436F713286AD4F600D23A1B /* PaymentCell */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		A436F712286AD4D500D23A1B /* PaymentController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PaymentController;
+			sourceTree = "<group>";
+		};
+		A436F713286AD4F600D23A1B /* PaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PaymentCell;
 			sourceTree = "<group>";
 		};
 		A48E76CF2869F26C00FA3EFE /* ShoppingCart */ = {

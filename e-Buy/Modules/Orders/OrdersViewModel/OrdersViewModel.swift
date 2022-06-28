@@ -1,0 +1,39 @@
+//
+//  OrdersViewModel.swift
+//  e-Buy
+//
+//  Created by Om Malikah  on 28/11/1443 AH.
+//
+
+import Foundation
+
+class OrdersViewModel {
+    
+//    var brands: [SmartCollection]?{
+//        didSet{
+//            bindingResult()
+//        }
+//    }
+    
+    var bindingResult: (()->()) = {}
+    init(serviece:ApiService){
+        
+    }
+    
+    func getData(){
+        
+        DispatchQueue.global().async {
+            
+//            let url = Constants.getBrands_URL()
+//
+//            ApiService.shared.getData(url: url) { [weak self] (result : Brands?, error) in
+//                if let error = error {
+//                    print(error)
+//                }else{
+//                    guard let results = result else { return }
+//                    self?.brands = results.smartcollections
+//                }
+//            }
+        }
+    }
+}

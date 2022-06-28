@@ -16,6 +16,10 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var homeViewModel: HomeViewModel?
+    var shouldAnimate = true
+    var currentIndex = 0
+    var adsImages = ["s1","s2","s3","s4"]
+    var timer:Timer?
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -29,6 +33,7 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         }
         homeViewModel?.getData()
         setupNavigationItems()
+        startTimer()
     }
     
     override func viewDidLoad() {
@@ -62,6 +67,26 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         self.brandsCollectionView.register(brandsCell, forCellWithReuseIdentifier: "BrandsCollectionViewCell")
     }
     
+    func startTimer(){
+            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.timeAction), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer(){
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc func timeAction(){
+        if shouldAnimate {
+        if currentIndex < adsImages.count - 1 {
+                currentIndex += 1
+            }else{
+                currentIndex = 0
+            }
+            adsCollectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
+        }
+    }
+    
     func setupNavigationItems() {
         let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favoTapped))
         let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartTapped))
@@ -88,7 +113,7 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         if collectionView == brandsCollectionView {
             return homeViewModel?.brands?.count ?? 0
         }else{
-            return 4
+            return adsImages.count
         }
     }
     
@@ -96,7 +121,7 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         if collectionView == adsCollectionView {
             
             guard let adsCell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdsCollectionViewCell", for: indexPath) as? AdsCollectionViewCell else {return UICollectionViewCell() }
-            adsCell.adsImageView.image = UIImage(named: "Adidas")
+            adsCell.adsImageView.image = UIImage(named: adsImages[indexPath.row])
             
             return adsCell
             

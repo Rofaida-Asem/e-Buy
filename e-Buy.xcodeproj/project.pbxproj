@@ -50,6 +50,8 @@
 		A436F71A286B4B3100D23A1B /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F718286B4B3100D23A1B /* PaymentTableViewCell.swift */; };
 		A436F71B286B4B3100D23A1B /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F719286B4B3100D23A1B /* PaymentTableViewCell.xib */; };
 		A436F71E286B78F200D23A1B /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F71D286B78F200D23A1B /* CheckButton.swift */; };
+		A436F721286B83B900D23A1B /* CuponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F71F286B83B900D23A1B /* CuponViewController.swift */; };
+		A436F722286B83B900D23A1B /* CuponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F720286B83B900D23A1B /* CuponViewController.xib */; };
 		A48E76D32869FB1900FA3EFE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E76D12869FB1900FA3EFE /* ShoppingCartViewController.swift */; };
 		A48E76D42869FB1900FA3EFE /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E76D22869FB1900FA3EFE /* ShoppingCartViewController.xib */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
@@ -124,6 +126,8 @@
 		A436F718286B4B3100D23A1B /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		A436F719286B4B3100D23A1B /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
 		A436F71D286B78F200D23A1B /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		A436F71F286B83B900D23A1B /* CuponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponViewController.swift; sourceTree = "<group>"; };
+		A436F720286B83B900D23A1B /* CuponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuponViewController.xib; sourceTree = "<group>"; };
 		A48E76D12869FB1900FA3EFE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		A48E76D22869FB1900FA3EFE /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +252,7 @@
 		9A897D5B2861ED52000CE5F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A436F723286B83C300D23A1B /* Cupon */,
 				A436F711286AD4C700D23A1B /* Payment */,
 				A48E76CF2869F26C00FA3EFE /* ShoppingCart */,
 				A4093551286491B3001E270D /* Me */,
@@ -447,6 +452,15 @@
 			path = customCheckButton;
 			sourceTree = "<group>";
 		};
+		A436F723286B83C300D23A1B /* Cupon */ = {
+			isa = PBXGroup;
+			children = (
+				A436F71F286B83B900D23A1B /* CuponViewController.swift */,
+				A436F720286B83B900D23A1B /* CuponViewController.xib */,
+			);
+			path = Cupon;
+			sourceTree = "<group>";
+		};
 		A48E76CF2869F26C00FA3EFE /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +604,7 @@
 				9A84379E2861ED2600DCE742 /* AdsCollectionViewCell.xib in Resources */,
 				A40935622864933E001E270D /* ContactUsViewController.xib in Resources */,
 				9A84376F2861EC1100DCE742 /* Assets.xcassets in Resources */,
+				A436F722286B83B900D23A1B /* CuponViewController.xib in Resources */,
 				9A25794D286233540077DF73 /* CategoryCollectionViewCell.xib in Resources */,
 				9A84376D2861EC1000DCE742 /* Main.storyboard in Resources */,
 				A436F717286B492F00D23A1B /* PaymentViewController.xib in Resources */,
@@ -739,6 +754,7 @@
 				A409354B28641C13001E270D /* CartItem.swift in Sources */,
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,
 				A409354F28648784001E270D /* SettingsViewController.swift in Sources */,
+				A436F721286B83B900D23A1B /* CuponViewController.swift in Sources */,
 				A409354728641B21001E270D /* CoreDataManager.swift in Sources */,
 				A40935722865FE6A001E270D /* CurrenciesContract.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,

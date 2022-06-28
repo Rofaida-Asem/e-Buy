@@ -45,6 +45,11 @@
 		A40935722865FE6A001E270D /* CurrenciesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40935712865FE6A001E270D /* CurrenciesContract.swift */; };
 		A436F70F286A085800D23A1B /* ShoppingCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F70D286A085800D23A1B /* ShoppingCartTableViewCell.xib */; };
 		A436F710286A085800D23A1B /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F70E286A085800D23A1B /* ShoppingCartTableViewCell.swift */; };
+		A436F716286B492F00D23A1B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F714286B492F00D23A1B /* PaymentViewController.swift */; };
+		A436F717286B492F00D23A1B /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F715286B492F00D23A1B /* PaymentViewController.xib */; };
+		A436F71A286B4B3100D23A1B /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F718286B4B3100D23A1B /* PaymentTableViewCell.swift */; };
+		A436F71B286B4B3100D23A1B /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F719286B4B3100D23A1B /* PaymentTableViewCell.xib */; };
+		A436F71E286B78F200D23A1B /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F71D286B78F200D23A1B /* CheckButton.swift */; };
 		A48E76D32869FB1900FA3EFE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E76D12869FB1900FA3EFE /* ShoppingCartViewController.swift */; };
 		A48E76D42869FB1900FA3EFE /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E76D22869FB1900FA3EFE /* ShoppingCartViewController.xib */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
@@ -114,6 +119,11 @@
 		A40935712865FE6A001E270D /* CurrenciesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesContract.swift; sourceTree = "<group>"; };
 		A436F70D286A085800D23A1B /* ShoppingCartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCartTableViewCell.xib; sourceTree = "<group>"; };
 		A436F70E286A085800D23A1B /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
+		A436F714286B492F00D23A1B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A436F715286B492F00D23A1B /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		A436F718286B4B3100D23A1B /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A436F719286B4B3100D23A1B /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		A436F71D286B78F200D23A1B /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		A48E76D12869FB1900FA3EFE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		A48E76D22869FB1900FA3EFE /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +414,7 @@
 		A436F711286AD4C700D23A1B /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				A436F71C286B78D400D23A1B /* customCheckButton */,
 				A436F712286AD4D500D23A1B /* PaymentController */,
 				A436F713286AD4F600D23A1B /* PaymentCell */,
 			);
@@ -413,6 +424,8 @@
 		A436F712286AD4D500D23A1B /* PaymentController */ = {
 			isa = PBXGroup;
 			children = (
+				A436F714286B492F00D23A1B /* PaymentViewController.swift */,
+				A436F715286B492F00D23A1B /* PaymentViewController.xib */,
 			);
 			path = PaymentController;
 			sourceTree = "<group>";
@@ -420,8 +433,18 @@
 		A436F713286AD4F600D23A1B /* PaymentCell */ = {
 			isa = PBXGroup;
 			children = (
+				A436F718286B4B3100D23A1B /* PaymentTableViewCell.swift */,
+				A436F719286B4B3100D23A1B /* PaymentTableViewCell.xib */,
 			);
 			path = PaymentCell;
+			sourceTree = "<group>";
+		};
+		A436F71C286B78D400D23A1B /* customCheckButton */ = {
+			isa = PBXGroup;
+			children = (
+				A436F71D286B78F200D23A1B /* CheckButton.swift */,
+			);
+			path = customCheckButton;
 			sourceTree = "<group>";
 		};
 		A48E76CF2869F26C00FA3EFE /* ShoppingCart */ = {
@@ -569,7 +592,9 @@
 				9A84376F2861EC1100DCE742 /* Assets.xcassets in Resources */,
 				9A25794D286233540077DF73 /* CategoryCollectionViewCell.xib in Resources */,
 				9A84376D2861EC1000DCE742 /* Main.storyboard in Resources */,
+				A436F717286B492F00D23A1B /* PaymentViewController.xib in Resources */,
 				9A84379B2861ED2600DCE742 /* HomeViewController.xib in Resources */,
+				A436F71B286B4B3100D23A1B /* PaymentTableViewCell.xib in Resources */,
 				A409356628649356001E270D /* AboutUsViewController.xib in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
 				A436F70F286A085800D23A1B /* ShoppingCartTableViewCell.xib in Resources */,
@@ -717,10 +742,13 @@
 				A409354728641B21001E270D /* CoreDataManager.swift in Sources */,
 				A40935722865FE6A001E270D /* CurrenciesContract.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,
+				A436F71A286B4B3100D23A1B /* PaymentTableViewCell.swift in Sources */,
 				A436F710286A085800D23A1B /* ShoppingCartTableViewCell.swift in Sources */,
 				A40935592864930F001E270D /* AddressViewController.swift in Sources */,
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,
 				9A897D602861EDB9000CE5F4 /* ApiService.swift in Sources */,
+				A436F71E286B78F200D23A1B /* CheckButton.swift in Sources */,
+				A436F716286B492F00D23A1B /* PaymentViewController.swift in Sources */,
 				A409353F286417AC001E270D /* ErrorMsgHandler.swift in Sources */,
 				9A84379C2861ED2600DCE742 /* HomeViewController.swift in Sources */,
 				A48E76D32869FB1900FA3EFE /* ShoppingCartViewController.swift in Sources */,

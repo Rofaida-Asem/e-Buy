@@ -37,6 +37,14 @@
 		9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8500128622E180010931F /* Launch Screen.storyboard */; };
 		9AFC003D2868B96E006E96C9 /* SubCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC003B2868B96E006E96C9 /* SubCategoryCollectionViewCell.swift */; };
 		9AFC003E2868B96E006E96C9 /* SubCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFC003C2868B96E006E96C9 /* SubCategoryCollectionViewCell.xib */; };
+		A436F72A286C5B0500D23A1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F728286C5B0400D23A1B /* SettingsViewController.swift */; };
+		A436F72B286C5B0500D23A1B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F729286C5B0500D23A1B /* SettingsViewController.xib */; };
+		A436F730286C5B5100D23A1B /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F72E286C5B5000D23A1B /* AddressViewController.swift */; };
+		A436F731286C5B5100D23A1B /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F72F286C5B5100D23A1B /* AddressViewController.xib */; };
+		A436F736286C5BAB00D23A1B /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F734286C5BAB00D23A1B /* ContactUsViewController.xib */; };
+		A436F737286C5BAB00D23A1B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F735286C5BAB00D23A1B /* ContactUsViewController.swift */; };
+		A436F73C286C5BE100D23A1B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436F73A286C5BE100D23A1B /* AboutUsViewController.swift */; };
+		A436F73D286C5BE100D23A1B /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436F73B286C5BE100D23A1B /* AboutUsViewController.xib */; };
 		C47DC75BFB7C32E2066EFEEB /* Pods_e_Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41F0128CC5C427DE450670 /* Pods_e_Buy.framework */; };
 		EAF96F968974B109890FF96F /* Pods_e_Buy_e_BuyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D187ED948896E64B645D205B /* Pods_e_Buy_e_BuyUITests.framework */; };
 		ECB6C19348B93E0E98ABD62D /* Pods_e_BuyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */; };
@@ -95,6 +103,14 @@
 		9AA8500128622E180010931F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AFC003B2868B96E006E96C9 /* SubCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AFC003C2868B96E006E96C9 /* SubCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A436F728286C5B0400D23A1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A436F729286C5B0500D23A1B /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		A436F72E286C5B5000D23A1B /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		A436F72F286C5B5100D23A1B /* AddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		A436F734286C5BAB00D23A1B /* ContactUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
+		A436F735286C5BAB00D23A1B /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		A436F73A286C5BE100D23A1B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		A436F73B286C5BE100D23A1B /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		B4182192074C96928C6642A7 /* Pods_e_BuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_BuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68D2F7712ABB3AE359C0A8E /* Pods-e-Buy-e-BuyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy-e-BuyUITests.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy-e-BuyUITests/Pods-e-Buy-e-BuyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB41E51C6350789018C3B04F /* Pods-e-Buy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Buy.debug.xcconfig"; path = "Target Support Files/Pods-e-Buy/Pods-e-Buy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +226,7 @@
 		9A7DDB5D2863971F00E14FDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A436F726286C5AC200D23A1B /* Settings */,
 				9A2A9BBE2866279700E23E75 /* Shared Views */,
 				9A2A9B742865E61000E23E75 /* Products */,
 				9A7DDB652863985400E14FDA /* Category */,
@@ -420,6 +437,77 @@
 			path = SubCategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		A436F726286C5AC200D23A1B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A436F727286C5ACE00D23A1B /* SettingsView */,
+				A436F738286C5BB200D23A1B /* AboutUs */,
+				A436F732286C5B6A00D23A1B /* ContactUs */,
+				A436F72C286C5B1300D23A1B /* Address */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A436F727286C5ACE00D23A1B /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A436F728286C5B0400D23A1B /* SettingsViewController.swift */,
+				A436F729286C5B0500D23A1B /* SettingsViewController.xib */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		A436F72C286C5B1300D23A1B /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				A436F72D286C5B1D00D23A1B /* AddressView */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		A436F72D286C5B1D00D23A1B /* AddressView */ = {
+			isa = PBXGroup;
+			children = (
+				A436F72E286C5B5000D23A1B /* AddressViewController.swift */,
+				A436F72F286C5B5100D23A1B /* AddressViewController.xib */,
+			);
+			path = AddressView;
+			sourceTree = "<group>";
+		};
+		A436F732286C5B6A00D23A1B /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				A436F733286C5B8200D23A1B /* ContactUsView */,
+			);
+			path = ContactUs;
+			sourceTree = "<group>";
+		};
+		A436F733286C5B8200D23A1B /* ContactUsView */ = {
+			isa = PBXGroup;
+			children = (
+				A436F735286C5BAB00D23A1B /* ContactUsViewController.swift */,
+				A436F734286C5BAB00D23A1B /* ContactUsViewController.xib */,
+			);
+			path = ContactUsView;
+			sourceTree = "<group>";
+		};
+		A436F738286C5BB200D23A1B /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				A436F739286C5BBF00D23A1B /* AboutUsView */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		A436F739286C5BBF00D23A1B /* AboutUsView */ = {
+			isa = PBXGroup;
+			children = (
+				A436F73A286C5BE100D23A1B /* AboutUsViewController.swift */,
+				A436F73B286C5BE100D23A1B /* AboutUsViewController.xib */,
+			);
+			path = AboutUsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,10 +619,14 @@
 			files = (
 				9A257949286231DF0077DF73 /* CategoryViewController.xib in Resources */,
 				9A84379D2861ED2600DCE742 /* BrandsCollectionViewCell.xib in Resources */,
+				A436F72B286C5B0500D23A1B /* SettingsViewController.xib in Resources */,
+				A436F736286C5BAB00D23A1B /* ContactUsViewController.xib in Resources */,
 				9A2A9B812865EC3C00E23E75 /* ProductsViewController.xib in Resources */,
 				9AFC003E2868B96E006E96C9 /* SubCategoryCollectionViewCell.xib in Resources */,
 				9A84379E2861ED2600DCE742 /* AdsCollectionViewCell.xib in Resources */,
 				9A84376F2861EC1100DCE742 /* Assets.xcassets in Resources */,
+				A436F73D286C5BE100D23A1B /* AboutUsViewController.xib in Resources */,
+				A436F731286C5B5100D23A1B /* AddressViewController.xib in Resources */,
 				9A25794D286233540077DF73 /* CategoryCollectionViewCell.xib in Resources */,
 				9A84379B2861ED2600DCE742 /* HomeViewController.xib in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
@@ -670,12 +762,15 @@
 				9A2A9B732865D1C000E23E75 /* CategoryViewModel.swift in Sources */,
 				9A2A9B7D2865E7B700E23E75 /* ProductsViewModel.swift in Sources */,
 				9A65FC2728634F48006127FD /* ProductsModel.swift in Sources */,
+				A436F73C286C5BE100D23A1B /* AboutUsViewController.swift in Sources */,
 				9A8437662861EC1000DCE742 /* AppDelegate.swift in Sources */,
 				9AFC003D2868B96E006E96C9 /* SubCategoryCollectionViewCell.swift in Sources */,
 				9A84379F2861ED2600DCE742 /* AdsCollectionViewCell.swift in Sources */,
+				A436F737286C5BAB00D23A1B /* ContactUsViewController.swift in Sources */,
 				9A0DC5A52866E46800B7CA15 /* MainCategoryCollectionViewCell.swift in Sources */,
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,
 				9A65FC2C28635610006127FD /* HomeViewModel.swift in Sources */,
+				A436F730286C5B5100D23A1B /* AddressViewController.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,
 				9A2A9B802865EC3C00E23E75 /* ProductsViewController.swift in Sources */,
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,
@@ -683,6 +778,7 @@
 				9A84379C2861ED2600DCE742 /* HomeViewController.swift in Sources */,
 				9A9350E22864766700EC1BCE /* BrandsModel.swift in Sources */,
 				9A9350E02864643F00EC1BCE /* Constants.swift in Sources */,
+				A436F72A286C5B0500D23A1B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

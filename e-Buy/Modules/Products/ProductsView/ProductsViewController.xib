@@ -24,18 +24,30 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LD6-VA-eeg">
-                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rJO-2K-XCH">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="40" minY="10" maxX="40" maxY="10"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-WZ-W3W">
+                    <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-ML-K7Z">
+                            <rect key="frame" x="-2" y="0.0" width="418" height="35"/>
+                        </slider>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LD6-VA-eeg">
+                            <rect key="frame" x="0.0" y="34" width="414" height="767"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rJO-2K-XCH">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="40" minY="10" maxX="40" maxY="10"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eIB-ML-K7Z" secondAttribute="trailing" id="Bzb-KT-A6S"/>
+                        <constraint firstItem="eIB-ML-K7Z" firstAttribute="leading" secondItem="bL4-WZ-W3W" secondAttribute="leading" id="sFs-qn-VZc"/>
+                    </constraints>
+                </stackView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-yd-hTs">
-                    <rect key="frame" x="197" y="468.5" width="20" height="20"/>
+                    <rect key="frame" x="197" y="502.5" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -43,13 +55,14 @@
             <constraints>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2NX-21-w4v"/>
                 <constraint firstItem="GoT-yd-hTs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="61S-Qo-oCw"/>
-                <constraint firstItem="LD6-VA-eeg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F4S-nY-C0A"/>
+                <constraint firstItem="GoT-yd-hTs" firstAttribute="centerY" secondItem="LD6-VA-eeg" secondAttribute="centerY" id="Ab0-a9-8Tn"/>
+                <constraint firstAttribute="trailing" secondItem="bL4-WZ-W3W" secondAttribute="trailing" id="CKP-a6-LH2"/>
+                <constraint firstItem="eIB-ML-K7Z" firstAttribute="height" secondItem="Yfy-fy-css" secondAttribute="height" multiplier="0.666667" id="Kfs-0Q-PlT"/>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MsY-Fh-jGI"/>
-                <constraint firstItem="LD6-VA-eeg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MvK-0I-hKP"/>
-                <constraint firstItem="LD6-VA-eeg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RkB-13-KJ4"/>
-                <constraint firstItem="LD6-VA-eeg" firstAttribute="top" secondItem="Yfy-fy-css" secondAttribute="bottom" id="WJM-rK-Waq"/>
-                <constraint firstItem="GoT-yd-hTs" firstAttribute="centerY" secondItem="LD6-VA-eeg" secondAttribute="centerY" id="XvP-Hi-emv"/>
+                <constraint firstItem="bL4-WZ-W3W" firstAttribute="top" secondItem="Yfy-fy-css" secondAttribute="bottom" id="fWk-RP-Jmh"/>
                 <constraint firstItem="Yfy-fy-css" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tRg-J0-eaA"/>
+                <constraint firstAttribute="bottom" secondItem="bL4-WZ-W3W" secondAttribute="bottom" id="uvy-at-625"/>
+                <constraint firstItem="bL4-WZ-W3W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yxe-iF-1Eh"/>
             </constraints>
             <point key="canvasLocation" x="492.75362318840581" y="39.508928571428569"/>
         </view>

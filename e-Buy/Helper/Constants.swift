@@ -18,7 +18,19 @@ class Constants {
     private static let custemCollections = "/custom_collections.json"
     private static let collections = "/collections"
     private static let orders = "/orders.json"
+    private static let fullHostName =  "https://menofia-2022-q3.myshopify.com"
+    private static let login = "/customers/search.json?query="
+    private static let register = "/customers.json"
+    private static let singleProduct = "/products/7358110630059.json"
+   
+    static let headers = ["Content-Type":"application/json","X-Shopify-Access-Token":"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"]
     
+    class func singleWithId (id:Int) -> String {
+        return  "/products/\(id).json"
+    }
+    class func getProduct(id:Int) -> String {
+        Constants.fullHostName + version + Constants.singleWithId(id: id)
+    }
     class func getBrands_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.smartCollection
     }
@@ -38,7 +50,20 @@ class Constants {
     class func getOrders_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.orders
     }
+    
+    class func getLogin_URL() -> String {
+        return Constants.fullHostName + Constants.version + Constants.login
+    }
+    
+    
+    class func getRegister_URL() -> String {
+        return Constants.fullHostName + Constants.version + Constants.register
+    }
+    
+    
 }
+
+
 
 // let smartCollection = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/smart_collections/286861033643.json"
 

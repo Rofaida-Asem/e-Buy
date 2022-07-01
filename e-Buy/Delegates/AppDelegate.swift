@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+     
+        IQKeyboardManager.shared.enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
@@ -25,10 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarVC = TabBarViewController()
         let homeNavigationVC = UINavigationController(rootViewController: HomeViewController())
         let categoryNavigationVC = UINavigationController(rootViewController: CategoryViewController())
-        tabBarVC.viewControllers = [homeNavigationVC,categoryNavigationVC]
+
         homeNavigationVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         categoryNavigationVC.tabBarItem = UITabBarItem(title: "Category", image: UIImage(systemName: "square.grid.2x2"), tag: 1)
-        
+        let loginVC = UINavigationController(rootViewController: LoginVC())
+        loginVC.tabBarItem = UITabBarItem(title: "reh", image: UIImage(systemName: "house.fill"),tag: 2)
+        tabBarVC.viewControllers = [homeNavigationVC,categoryNavigationVC,loginVC]
         return tabBarVC
     }
 

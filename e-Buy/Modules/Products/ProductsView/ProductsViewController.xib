@@ -31,16 +31,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-ML-K7Z">
-                                    <rect key="frame" x="138" y="11" width="258" height="31"/>
+                                    <rect key="frame" x="143" y="11" width="258" height="31"/>
                                 </slider>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-4Z-mbg">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-4Z-mbg">
                                     <rect key="frame" x="20" y="15" width="39" height="22"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.42574394389999998" green="0.22646756139999999" blue="0.55672845209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nzZ-ue-WBc">
-                                    <rect key="frame" x="67" y="16" width="41.5" height="20.5"/>
+                                    <rect key="frame" x="67" y="16" width="68.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.42574394389999998" green="0.22646756139999999" blue="0.55672845209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
@@ -48,13 +48,13 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="eIB-ML-K7Z" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nzZ-ue-WBc" secondAttribute="trailing" constant="31.5" id="AQI-jZ-yDs"/>
+                                <constraint firstAttribute="trailing" secondItem="eIB-ML-K7Z" secondAttribute="trailing" constant="15" id="9tn-T2-Lda"/>
+                                <constraint firstItem="eIB-ML-K7Z" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nzZ-ue-WBc" secondAttribute="trailing" multiplier="0.8" constant="36.5" id="RCq-Xp-4FT"/>
                                 <constraint firstItem="eIB-ML-K7Z" firstAttribute="top" secondItem="K8v-hn-Z5g" secondAttribute="top" constant="11" id="To4-8P-pLU"/>
                                 <constraint firstItem="nzZ-ue-WBc" firstAttribute="centerY" secondItem="Zjm-4Z-mbg" secondAttribute="centerY" id="WEG-zH-MpZ"/>
-                                <constraint firstItem="Zjm-4Z-mbg" firstAttribute="top" secondItem="K8v-hn-Z5g" secondAttribute="top" constant="15" id="ZPk-E8-Z2I"/>
+                                <constraint firstItem="Zjm-4Z-mbg" firstAttribute="top" relation="lessThanOrEqual" secondItem="K8v-hn-Z5g" secondAttribute="top" constant="15" id="ZPk-E8-Z2I"/>
                                 <constraint firstItem="nzZ-ue-WBc" firstAttribute="leading" secondItem="Zjm-4Z-mbg" secondAttribute="trailing" constant="8" symbolic="YES" id="fDV-l6-CQj"/>
                                 <constraint firstItem="eIB-ML-K7Z" firstAttribute="centerY" secondItem="Zjm-4Z-mbg" secondAttribute="centerY" id="mMY-L5-ks4"/>
-                                <constraint firstAttribute="trailing" secondItem="eIB-ML-K7Z" secondAttribute="trailing" constant="20" symbolic="YES" id="s4i-3m-91y"/>
                                 <constraint firstItem="Zjm-4Z-mbg" firstAttribute="leading" secondItem="K8v-hn-Z5g" secondAttribute="leading" constant="20" id="yO1-G9-3tv"/>
                                 <constraint firstAttribute="bottom" secondItem="eIB-ML-K7Z" secondAttribute="bottom" constant="9" id="zjd-sN-9KP"/>
                             </constraints>

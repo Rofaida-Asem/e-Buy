@@ -31,17 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         homeNavigationVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         categoryNavigationVC.tabBarItem = UITabBarItem(title: "Category", image: UIImage(systemName: "square.grid.2x2"), tag: 1)
         let loginVC = UINavigationController(rootViewController: LoginVC())
-        loginVC.tabBarItem = UITabBarItem(title: "reh", image: UIImage(systemName: "house.fill"),tag: 2)
+        loginVC.tabBarItem = UITabBarItem(title: "ME", image: UIImage(systemName: "person"),tag: 2)
         tabBarVC.viewControllers = [homeNavigationVC,categoryNavigationVC,loginVC]
         return tabBarVC
     }
 
 }
 
-class TabBarViewController: UITabBarController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tabBar.backgroundColor = .purple
-        tabBar.tintColor = .white
-    }
-}
+

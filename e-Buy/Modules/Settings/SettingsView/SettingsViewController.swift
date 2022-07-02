@@ -25,14 +25,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func currencyButton(_ sender: UIButton) {
         
-        let alert = UIAlertController(title: "Change Currency", message: "What currency do you want ?", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
-            
-        }))
-        alert.addAction(UIAlertAction(title: "EUR", style: .default, handler: { [self] _ in
-            <#code#>
-        }))
-        present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "Change Currency", message: "What currency do you want ?", preferredStyle: .actionSheet)
+//        alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
+//            
+//        }))
+//        alert.addAction(UIAlertAction(title: "EUR", style: .default, handler: { [self] _ in
+//            <#code#>
+//        }))
+//        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {

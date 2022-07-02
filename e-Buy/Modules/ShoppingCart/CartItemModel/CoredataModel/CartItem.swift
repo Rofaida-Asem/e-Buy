@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CartItem: Codable{
+struct CartItem {
     
     let name:String
     let price: String

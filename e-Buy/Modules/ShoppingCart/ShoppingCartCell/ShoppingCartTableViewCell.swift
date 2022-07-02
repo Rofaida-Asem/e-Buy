@@ -11,11 +11,13 @@ import Kingfisher
 class ShoppingCartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var cashLabel: UILabel!
     @IBOutlet weak var describtionLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
+    @IBAction func stepper(_ sender: UIStepper) {
+        amountLabel.text = String(sender.value)
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +32,7 @@ class ShoppingCartTableViewCell: UITableViewCell {
    
     func configureCell(cell:CartItem){
         self.describtionLabel.text = cell.name
-        self.priceLabel.text = cell.price
+        self.cashLabel.text = cell.price
         self.productImageView.setImage(with: "\(cell.imgUrl)")
         self.amountLabel.text = cell.qty
     }

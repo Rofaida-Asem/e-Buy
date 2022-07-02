@@ -18,14 +18,11 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func addressButton(_ sender: UIButton) {
-        let addressViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddressViewController") as! AddressViewController
-        addressViewController.modalPresentationStyle = .fullScreen
-        self.present(addressViewController, animated: true)
+        showAddressVC()
     }
     
     @IBAction func currencyButton(_ sender: UIButton) {
         showActionSheet()
-        
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {
@@ -37,7 +34,13 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logOutButton(_ sender: Any) {
+    }
+    
+    func showAddressVC() {
         
+        let addressViewController = AddressViewController(nibName: "AddressViewController", bundle: .main)
+        addressViewController.modalPresentationStyle = .fullScreen
+        presentingViewController?.present(addressViewController, animated: true)
     }
     
     func showContactUsVC() {

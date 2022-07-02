@@ -18,40 +18,62 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func addressButton(_ sender: UIButton) {
-        let addressViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddressViewController") as! AddressViewController
-        addressViewController.modalPresentationStyle = .fullScreen
-        self.present(addressViewController, animated: true)
+        showAddressVC()
     }
     
     @IBAction func currencyButton(_ sender: UIButton) {
-        
-//        let alert = UIAlertController(title: "Change Currency", message: "What currency do you want ?", preferredStyle: .actionSheet)
-//        alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
-//            
-//        }))
-//        alert.addAction(UIAlertAction(title: "EUR", style: .default, handler: { [self] _ in
-//            <#code#>
-//        }))
-//        present(alert, animated: true, completion: nil)
+        showActionSheet()
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {
-        let contactUsViewController = ContactUsViewController(nibName: "ContactUsViewController", bundle: .main)
-        contactUsViewController.modalPresentationStyle = .fullScreen
-        presentingViewController?.present(contactUsViewController, animated: true)
-
+        showContactUsVC()
     }
     
     @IBAction func aboutUsButton(_ sender: UIButton) {
-        let aboutUsViewController = AboutUsViewController(nibName: "AboutUsViewController", bundle: .main)
-        aboutUsViewController.modalPresentationStyle = .fullScreen
-        presentingViewController?.present(aboutUsViewController, animated: true)
+        showAboutUsVC()
     }
     
     @IBAction func logOutButton(_ sender: Any) {
         
     }
     
+    func showAddressVC() {
+        
+        let addressViewController = AddressViewController(nibName: "AddressViewController", bundle: .main)
+        addressViewController.modalPresentationStyle = .fullScreen
+        presentingViewController?.present(addressViewController, animated: true)
+    }
+    
+    func showContactUsVC() {
+        
+        let contactUsViewController = ContactUsViewController(nibName: "ContactUsViewController", bundle: .main)
+        contactUsViewController.modalPresentationStyle = .fullScreen
+        presentingViewController?.present(contactUsViewController, animated: true)
+    }
+    
+    func showAboutUsVC() {
+        
+        let aboutUsViewController = AboutUsViewController(nibName: "AboutUsViewController", bundle: .main)
+        aboutUsViewController.modalPresentationStyle = .fullScreen
+        presentingViewController?.present(aboutUsViewController, animated: true)
+    }
+    
+    
+    func showActionSheet(){
+        
+        let alert = UIAlertController(title: "Change Currency", message: "What currency do you want ?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "USD", style: .default, handler: { [self] _ in
+            printContent("Change to USD")
+        }))
+        alert.addAction(UIAlertAction(title: "EGP", style: .default, handler: { [self] _ in
+            printContent("Change to EGP")
+        }))
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { [self] _ in
+            printContent("Dismissed")
+        }))
+        present(alert, animated: true, completion: nil)
+        
+    }
    
 
 }

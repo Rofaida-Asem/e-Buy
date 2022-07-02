@@ -24,7 +24,7 @@ struct SmartCollection: Decodable {
     let bodyHTML: String?
     let publishedAt: Date?
     let sortOrder: SortOrder?
-//    let templateSuffix: NSNull
+ 
     let disjunctive: Bool?
     let rules: [Rule]?
     let publishedScope: PublishedScope?

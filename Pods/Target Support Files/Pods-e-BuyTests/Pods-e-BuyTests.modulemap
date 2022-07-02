@@ -1,6 +1,0 @@
-framework module Pods_e_BuyTests {
-  umbrella header "Pods-e-BuyTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

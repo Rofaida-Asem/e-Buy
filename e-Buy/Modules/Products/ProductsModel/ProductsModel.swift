@@ -62,22 +62,49 @@ struct Option: Decodable {
 struct Variant: Decodable {
     let id, productID: Int?
     let title, price, sku: String?
-    let position: Int?
-    let inventoryPolicy: String?
+ //   let position: Int?
+ //   let inventoryPolicy: String?
 //    let compareAtPrice: NSNull?
-    let fulfillmentService, inventoryManagement, option1: String?
+ //   let fulfillmentService, inventoryManagement, option1: String?
  //   let option2, option3: NSNull?
-    let createdAt, updatedAt: Date?
-    let taxable: Bool?
-    let barcode: String?
-    let grams: Int?
-    let imageID: Int?
-    let weight: Double?
-    let weightUnit: String?
-    let inventoryItemID, inventoryQuantity, oldInventoryQuantity: Int?
+ //   let createdAt, updatedAt: Date?
+ //   let taxable: Bool?
+ //   let barcode: String?
+ //   let grams: Int?
+//    let imageID: Int?
+//    let weight: Double?
+//    let weightUnit: String?
+//    let inventoryItemID, inventoryQuantity, oldInventoryQuantity: Int?
     let presentmentPrices: [PresentmentPrice]?
-    let requiresShipping: Bool?
-    let adminGraphqlAPIID: String?
+ //   let requiresShipping: Bool?
+ //   let adminGraphqlAPIID: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case productID = "product_id"
+        case title = "title"
+        case price = "price"
+        case sku = "sku"
+//        case position = "position"
+//        case options = "options"
+//        case inventoryPolicy = "inventoryPolicy"
+//        case fulfillmentService = "fulfillmentService"
+//        case inventoryManagement = "inventoryManagement"
+//        case option1 = "option1"
+//        case createdAt = "createdAt"
+//        case updatedAt = "updatedAt"
+//        case taxable = "taxable"
+//        case barcode = "barcode"
+//        case grams = "grams"
+//        case imageID = "imageID"
+//        case weight = "weight"
+//        case weightUnit = "weightUnit"
+//        case inventoryItemID = "inventoryItemID"
+//        case inventoryQuantity = "inventoryQuantity"
+//        case oldInventoryQuantity = "oldInventoryQuantity"
+//        case requiresShipping = "requiresShipping"
+        case presentmentPrices = "presentmentPrices"
+    }
 }
 
 // MARK: - PresentmentPrice

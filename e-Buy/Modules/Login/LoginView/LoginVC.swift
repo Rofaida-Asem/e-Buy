@@ -85,6 +85,8 @@ class LoginVC: UIViewController {
     }
     @objc
     private func cartTapped() {
+        let cartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
+        navigationController?.pushViewController(cartVC, animated: true)
         print("cart tapped!!")
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 class HomeViewModel {
-    
+    let defaults = UserDefaults.standard
     var brands: [SmartCollection]?{
         didSet{
             bindingResult()
@@ -20,6 +20,12 @@ class HomeViewModel {
         
     }
     
+    func ISLogin() ->Bool {
+        
+    return defaults.bool(forKey: "userID")
+        
+        
+    }
     func getData(){
         
         DispatchQueue.global().async {

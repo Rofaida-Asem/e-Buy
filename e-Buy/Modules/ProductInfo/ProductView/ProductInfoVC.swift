@@ -4,7 +4,7 @@
 //
 //  Created by salah waleed on 03/07/2022.
 //
-
+import ProgressHUD
 import UIKit
 import Kingfisher
 import Alamofire
@@ -48,7 +48,9 @@ class ProductInfoVC: UIViewController {
         imagesProducttCV.dataSource = self
         sizeProductCollectionView.delegate = self
         sizeProductCollectionView.dataSource = self
-        registerBrandsCell()
+        coustmerReviewsTV.delegate = self
+        coustmerReviewsTV.dataSource = self
+        registerCell()
         productInfoViewModel?.bindingResult = { [self] in
             self.imagesProducttCV.reloadData()
             self.sizeProductCollectionView.reloadData()
@@ -56,15 +58,16 @@ class ProductInfoVC: UIViewController {
             self.productPriceLbl.text = self.productInfoViewModel?.productInfo?.variants?[0].price
             self.productInfoTextView.text = self.productInfoViewModel?.productInfo?.bodyHTML
             self.startTimer()
+            setupNavigationItems()
         }
     }
-    func registerBrandsCell(){
+    func registerCell(){
         
         let imageCell = UINib(nibName: "imageCvCell", bundle: nil)
         self.imagesProducttCV.register(imageCell, forCellWithReuseIdentifier: "imageCvCell")
         let sizeCell = UINib(nibName: "SizeCVCell", bundle: nil)
         self.sizeProductCollectionView.register(sizeCell, forCellWithReuseIdentifier: "SizeCVCell")
-        
+        coustmerReviewsTV.register(UINib(nibName: "RateTVCell", bundle: nil), forCellReuseIdentifier: "RateTVCell")
     }
 
     func startTimer(){
@@ -89,13 +92,33 @@ class ProductInfoVC: UIViewController {
         }
     }
     
+    func setupNavigationItems() {
+ 
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        navigationController?.navigationBar.tintColor = .purple
+        
+ 
+        
+    }
     @IBAction func saveToFavBtn(_ sender: UIButton) {
+        if productInfoViewModel?.ISLogin() == false {
+            ProgressHUD.showError("must be login")
+        }else{
+            
+        }
     }
     
     @IBAction func addToBagBtn(_ sender: UIButton) {
+        if productInfoViewModel?.ISLogin() == false {
+            ProgressHUD.showError("must be login")
+        }else{
+            
+        }
     }
     
     @IBAction func goToReview(_ sender: UIButton) {
+        let rev = ReviewVc()
+        self.navigationController?.pushViewController(rev, animated: true)
     }
     
 }
@@ -135,4 +158,22 @@ extension ProductInfoVC: UICollectionViewDelegateFlowLayout {
             return CGSize(width: sizeProductCollectionView.frame.width / 4, height: sizeProductCollectionView.frame.height * 0.85)
         }
     }
+}
+
+
+extension ProductInfoVC:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+ 
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RateTVCell", for: indexPath) as? RateTVCell else {return UITableViewCell()}
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return coustmerReviewsTV.frame.height / 1.5
+    }
+    
 }

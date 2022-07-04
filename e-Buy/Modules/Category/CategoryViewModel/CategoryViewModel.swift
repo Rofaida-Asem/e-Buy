@@ -8,7 +8,7 @@
 import Foundation
 
 class CategoryViewModel {
-  
+    let defaults = UserDefaults.standard
     var product: [Product]?{
         didSet{
             bindingResultProducts()
@@ -50,6 +50,14 @@ class CategoryViewModel {
             }
             
         }
+    }
+    
+    
+    func ISLogin() ->Bool {
+        
+    return defaults.bool(forKey: "userID")
+        
+        
     }
     
     func getMainCategory(){

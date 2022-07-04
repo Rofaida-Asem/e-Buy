@@ -20,6 +20,10 @@
 		4E44B9342872AFA0007357E2 /* imageCvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44B9322872AFA0007357E2 /* imageCvCell.xib */; };
 		4E44B9392872BB15007357E2 /* SizeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44B9372872BB15007357E2 /* SizeCVCell.swift */; };
 		4E44B93A2872BB15007357E2 /* SizeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44B9382872BB15007357E2 /* SizeCVCell.xib */; };
+		4E44B93D2872E84D007357E2 /* RateTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44B93B2872E84D007357E2 /* RateTVCell.swift */; };
+		4E44B93E2872E84D007357E2 /* RateTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44B93C2872E84D007357E2 /* RateTVCell.xib */; };
+		4E44B9422872F113007357E2 /* ReviewVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44B9402872F113007357E2 /* ReviewVc.swift */; };
+		4E44B9432872F113007357E2 /* ReviewVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44B9412872F113007357E2 /* ReviewVc.xib */; };
 		4E617458286C63220028E417 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E617457286C63220028E417 /* RegisterModel.swift */; };
 		4E87DA82286ECE8F000DE2D2 /* ApiRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87DA81286ECE8F000DE2D2 /* ApiRequestModel.swift */; };
 		4E87DA85286F0931000DE2D2 /* CheckEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87DA84286F0931000DE2D2 /* CheckEmail.swift */; };
@@ -119,6 +123,10 @@
 		4E44B9322872AFA0007357E2 /* imageCvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCvCell.xib; sourceTree = "<group>"; };
 		4E44B9372872BB15007357E2 /* SizeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCVCell.swift; sourceTree = "<group>"; };
 		4E44B9382872BB15007357E2 /* SizeCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeCVCell.xib; sourceTree = "<group>"; };
+		4E44B93B2872E84D007357E2 /* RateTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTVCell.swift; sourceTree = "<group>"; };
+		4E44B93C2872E84D007357E2 /* RateTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateTVCell.xib; sourceTree = "<group>"; };
+		4E44B9402872F113007357E2 /* ReviewVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVc.swift; sourceTree = "<group>"; };
+		4E44B9412872F113007357E2 /* ReviewVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewVc.xib; sourceTree = "<group>"; };
 		4E617457286C63220028E417 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		4E87DA81286ECE8F000DE2D2 /* ApiRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestModel.swift; sourceTree = "<group>"; };
 		4E87DA84286F0931000DE2D2 /* CheckEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmail.swift; sourceTree = "<group>"; };
@@ -294,6 +302,8 @@
 		4E44B92F2872AF73007357E2 /* tableviewcells */ = {
 			isa = PBXGroup;
 			children = (
+				4E44B93B2872E84D007357E2 /* RateTVCell.swift */,
+				4E44B93C2872E84D007357E2 /* RateTVCell.xib */,
 			);
 			path = tableviewcells;
 			sourceTree = "<group>";
@@ -314,6 +324,15 @@
 				4E44B9382872BB15007357E2 /* SizeCVCell.xib */,
 			);
 			path = sizes;
+			sourceTree = "<group>";
+		};
+		4E44B93F2872F0EC007357E2 /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				4E44B9402872F113007357E2 /* ReviewVc.swift */,
+				4E44B9412872F113007357E2 /* ReviewVc.xib */,
+			);
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 		4E617456286C61AC0028E417 /* RegisterModel */ = {
@@ -510,11 +529,9 @@
 		9A7DDB5D2863971F00E14FDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
- 
+				4E44B93F2872F0EC007357E2 /* Reviews */,
 				A436F76A2870614A00D23A1B /* ShoppingCart */,
- 
 				4E87DA8B286FEC8B000DE2D2 /* Me */,
- 
 				A436F726286C5AC200D23A1B /* Settings */,
 				4E91F05B286D37CF00F1E15B /* ProductInfo */,
 				4E33F4FC286B43A100CEFA77 /* Login */,
@@ -991,6 +1008,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E44B9432872F113007357E2 /* ReviewVc.xib in Resources */,
+				4E44B93E2872E84D007357E2 /* RateTVCell.xib in Resources */,
 				4E44B9342872AFA0007357E2 /* imageCvCell.xib in Resources */,
 				4E44B92B28718D5E007357E2 /* ProductInfoVC.xib in Resources */,
 				4E33F504286B43A100CEFA77 /* LoginVC.xib in Resources */,
@@ -1013,11 +1032,8 @@
 				4E87DA96286FECF8000DE2D2 /* MeViewController.xib in Resources */,
 				9AA8500228622E180010931F /* Launch Screen.storyboard in Resources */,
 				9A0DC5A62866E46800B7CA15 /* MainCategoryCollectionViewCell.xib in Resources */,
- 
 				A436F7772870633400D23A1B /* ShoppingCartTableViewCell.xib in Resources */,
- 
 				4E44B93A2872BB15007357E2 /* SizeCVCell.xib in Resources */,
- 
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,11 +1100,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
- 
 				9A58A2622872414200540671 /* OrdersTableViewCell.swift in Sources */,
- 
 				4E87DA95286FECF8000DE2D2 /* MeViewController.swift in Sources */,
- 
 				9A1C7C2F286742280016F48E /* MainCategory.swift in Sources */,
 				4E1B4B54286BB7D200F74678 /* RegisterViewModel.swift in Sources */,
 				9A2A9B732865D1C000E23E75 /* CategoryViewModel.swift in Sources */,
@@ -1102,11 +1115,8 @@
 				A436F7862870647A00D23A1B /* UIImageExtention.swift in Sources */,
 				A436F76D2870627E00D23A1B /* ShoppingCartViewModel.swift in Sources */,
 				9A84379F2861ED2600DCE742 /* AdsCollectionViewCell.swift in Sources */,
- 
 				A436F77E287063B400D23A1B /* CartItem.swift in Sources */,
- 
 				4E44B9332872AFA0007357E2 /* imageCvCell.swift in Sources */,
- 
 				A436F737286C5BAB00D23A1B /* ContactUsViewController.swift in Sources */,
 				9A0DC5A52866E46800B7CA15 /* MainCategoryCollectionViewCell.swift in Sources */,
 				9A25794C286233540077DF73 /* CategoryCollectionViewCell.swift in Sources */,
@@ -1115,6 +1125,7 @@
 				4E44B92A28718D5E007357E2 /* ProductInfoVC.swift in Sources */,
 				9A257948286231DF0077DF73 /* CategoryViewController.swift in Sources */,
 				9A2A9B802865EC3C00E23E75 /* ProductsViewController.swift in Sources */,
+				4E44B93D2872E84D007357E2 /* RateTVCell.swift in Sources */,
 				4E44B92D28727C34007357E2 /* ProductInfoViewModel.swift in Sources */,
 				9A8437A02861ED2600DCE742 /* BrandsCollectionViewCell.swift in Sources */,
 				A436F771287062EE00D23A1B /* ShoppingCartViewController.swift in Sources */,
@@ -1125,6 +1136,7 @@
 				4E33F501286B43A100CEFA77 /* RegisterVC.swift in Sources */,
 				4E87DA8A286FC532000DE2D2 /* CustomTabBar.swift in Sources */,
 				A436F784287063FB00D23A1B /* ShoppingCartModel.xcdatamodeld in Sources */,
+				4E44B9422872F113007357E2 /* ReviewVc.swift in Sources */,
 				A436F789287064B900D23A1B /* ErrorMsgHandler.swift in Sources */,
 				9A84379C2861ED2600DCE742 /* HomeViewController.swift in Sources */,
 				4E87DA90286FECC0000DE2D2 /* MeViewModel.swift in Sources */,

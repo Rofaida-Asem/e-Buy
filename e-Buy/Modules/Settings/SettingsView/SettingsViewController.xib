@@ -84,30 +84,12 @@
                         </button>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xt-qP-Wek">
-                    <rect key="frame" x="122" y="586" width="170" height="60"/>
-                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="T00-RD-PhM"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Log out">
-                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="logOutButton:" destination="-1" eventType="touchUpInside" id="qwK-Tj-Sqw"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
-                <constraint firstItem="3xt-qP-Wek" firstAttribute="top" secondItem="wdM-Zp-3G0" secondAttribute="bottom" constant="100" id="8nR-vq-hVc"/>
-                <constraint firstItem="3xt-qP-Wek" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="122" id="D32-E2-orA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wdM-Zp-3G0" secondAttribute="trailing" id="Dgc-m8-bOq"/>
                 <constraint firstItem="wdM-Zp-3G0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fkk-QH-alN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3xt-qP-Wek" secondAttribute="trailing" constant="122" id="YVC-mX-zxD"/>
                 <constraint firstItem="wdM-Zp-3G0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="wCK-8e-77i"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
@@ -116,9 +98,6 @@
     <resources>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

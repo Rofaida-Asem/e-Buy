@@ -95,12 +95,15 @@ class MeViewController: UIViewController {
     
     @objc
     private func settingTapped() {
+        let settingsVC = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        navigationController?.pushViewController(settingsVC, animated: true)
         print(" ")
     }
     @objc
     private func cartTapped() {
+        let cartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
+        navigationController?.pushViewController(cartVC, animated: true)
         print("cart tapped!!")
     }
  
-
 }

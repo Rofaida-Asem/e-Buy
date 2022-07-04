@@ -33,29 +33,24 @@ class SettingsViewController: UIViewController {
         showAboutUsVC()
     }
     
-    @IBAction func logOutButton(_ sender: Any) {
-        
-    }
+   
     
     func showAddressVC() {
         
-        let addressViewController = AddressViewController(nibName: "AddressViewController", bundle: .main)
-        addressViewController.modalPresentationStyle = .fullScreen
-        presentingViewController?.present(addressViewController, animated: true)
+        let addressViewController = AddressViewController(nibName: "AddressViewController", bundle: nil)
+        navigationController?.pushViewController(addressViewController, animated: true)
     }
     
     func showContactUsVC() {
-        
-        let contactUsViewController = ContactUsViewController(nibName: "ContactUsViewController", bundle: .main)
-        contactUsViewController.modalPresentationStyle = .fullScreen
-        presentingViewController?.present(contactUsViewController, animated: true)
+
+        let contactUsViewController = ContactUsViewController(nibName: "ContactUsViewController", bundle: nil)
+        navigationController?.pushViewController(contactUsViewController, animated: true)
     }
     
     func showAboutUsVC() {
         
         let aboutUsViewController = AboutUsViewController(nibName: "AboutUsViewController", bundle: .main)
-        aboutUsViewController.modalPresentationStyle = .fullScreen
-        presentingViewController?.present(aboutUsViewController, animated: true)
+        navigationController?.pushViewController(aboutUsViewController, animated: true)
     }
     
     
@@ -77,3 +72,4 @@ class SettingsViewController: UIViewController {
    
 
 }
+

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ProgressHUD
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var mainCategoryCollectionView: UICollectionView!
@@ -85,7 +85,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @objc
     private func favoTapped() {
-        print("fav tapped!!")
+        if categoryViewModel?.ISLogin() == false {
+            ProgressHUD.showError("you must be login")
+        }else{
+            
+        }
     }
     @objc
     private func cartTapped() {

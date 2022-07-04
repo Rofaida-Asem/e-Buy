@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+let defaults = UserDefaults.standard
 class ProductInfoViewModel {
     var productInfo:Productt?{
         didSet{
@@ -19,7 +19,12 @@ var bindingResult:(()->()) = {}
         self.id = id
         get()
     }
-    
+    func ISLogin() ->Bool {
+        
+    return defaults.bool(forKey: "userID")
+        
+        
+    }
     
     func get(){
         let request = ApiRequest()

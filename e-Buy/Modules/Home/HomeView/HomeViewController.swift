@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-
+import ProgressHUD
 class HomeViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var adsCollectionView: UICollectionView!
@@ -102,7 +102,9 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
     
     @objc
     private func favoTapped() {
-        print("fav tapped!!")
+        if homeViewModel?.ISLogin() == false {
+            ProgressHUD.showError("Must be Login First")
+        }
     }
     @objc
     private func cartTapped() {

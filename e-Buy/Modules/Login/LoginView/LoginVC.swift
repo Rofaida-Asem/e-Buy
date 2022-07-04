@@ -84,7 +84,7 @@ class LoginVC: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
         navigationController?.navigationBar.tintColor = .purple
         
-<<<<<<< HEAD
+ 
         
     }
     @objc
@@ -96,8 +96,8 @@ class LoginVC: UIViewController {
         let cartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
         navigationController?.pushViewController(cartVC, animated: true)
         print("cart tapped!!")
-=======
->>>>>>> filter
+ 
+ 
     }
  
 }

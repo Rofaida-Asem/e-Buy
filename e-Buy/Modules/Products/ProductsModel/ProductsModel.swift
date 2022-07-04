@@ -83,7 +83,7 @@ struct Variant: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case productID = "product_id"
+  case product_id
         case title = "title"
         case price = "price"
         case sku = "sku"

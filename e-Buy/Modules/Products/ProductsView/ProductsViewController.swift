@@ -103,7 +103,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegate, UIColl
         guard let products =  productsViewModel?.filterData else {return
             categoryCell }
         categoryCell.categoryImageView.kf.setImage(with: URL(string: products[indexPath.row].image?.src ?? ""))
-        categoryCell.priceLabel.text = (products[indexPath.row].variants?.first?.price ?? "0") + " EGP"
+        categoryCell.priceLabel.text = (products[indexPath.row].variants?.first?.price ?? "0") + " USD"
         
         return categoryCell
     }

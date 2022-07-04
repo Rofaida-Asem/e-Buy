@@ -115,7 +115,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             guard let products =  categoryViewModel?.product else {return
                 categoryCell }
             categoryCell.categoryImageView.kf.setImage(with: URL(string: products[indexPath.row].image?.src ?? ""))
-            categoryCell.priceLabel.text = (products[indexPath.row].variants?.first?.price ?? "99.00")  + " EGP"
+            categoryCell.priceLabel.text = (products[indexPath.row].variants?.first?.price ?? "99.00")  + " USD"
             print(products[indexPath.row].variants?.first?.price)
             return categoryCell
         }else if collectionView == mainCategoryCollectionView {

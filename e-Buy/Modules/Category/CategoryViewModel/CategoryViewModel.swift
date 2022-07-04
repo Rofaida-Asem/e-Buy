@@ -45,6 +45,7 @@ class CategoryViewModel {
                 }else{
                     guard let results = results else { return }
                     self?.product = results.products
+                    print(results)
                 }
             }
             
@@ -63,7 +64,7 @@ class CategoryViewModel {
                 }else{
                     guard let results = result else { return }
                     self?.custemCollection = results.customcollections
-                    
+                   
                 }
             }
         }

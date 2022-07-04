@@ -28,7 +28,7 @@ class Constants {
     class func singleWithId (id:Int) -> String {
         return  "/products/\(id).json"
     }
-    class func getProduct(id:Int) -> String {
+    class func getOneProduct(id:Int) -> String {
         Constants.fullHostName + version + Constants.singleWithId(id: id)
     }
     class func getBrands_URL() -> String {

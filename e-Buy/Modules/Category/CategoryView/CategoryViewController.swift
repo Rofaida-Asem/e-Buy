@@ -127,7 +127,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView {
-            
+            let productinfo = ProductInfoVC()
+            productinfo.productInfoViewModel = ProductInfoViewModel(id: categoryViewModel?.product?[indexPath.row].variants?[0].product_id ?? 0)
+            self.navigationController?.pushViewController(productinfo, animated: true)
         }else if collectionView == mainCategoryCollectionView {
             id = categoryViewModel?.custemCollection?[indexPath.row+1].id ?? 0
             categoryViewModel?.getData(byCollectionId: id)

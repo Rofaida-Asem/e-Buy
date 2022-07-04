@@ -8,7 +8,11 @@
 import Foundation
 class LoginViewModel{
     
-    var sucess:Bool?
+    var sucess:Bool?{
+        didSet{
+            bindingResult()
+        }
+    }
     
     
     var bindingResult:(()->()) = {}
@@ -29,7 +33,14 @@ class LoginViewModel{
             }else{
                 
                 guard let result = response  else {return}
-                print(result)
+            
+                guard let id = result.customers?[0].id else {return}
+                guard let name = result.customers?[0].firstName else {return}
+              
+                let defaults = UserDefaults.standard
+                    defaults.set(id, forKey: "userID")
+                defaults.set(name, forKey: "userName")
+     
                 self.sucess = true
             
         }

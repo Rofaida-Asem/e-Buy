@@ -44,8 +44,8 @@ class ApiService {
             case .success(_):
                 
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
+//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
                     let result = try JSONDecoder().decode(T.self, from: data)
                     completion(nil, result)
                 }catch{

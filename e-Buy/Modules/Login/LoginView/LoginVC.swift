@@ -29,11 +29,12 @@ class LoginVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupui()
+        title = "Welcome"
         setupNavigationItems()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginViewModel?.login(email: "sasa@gmail.com", password: "11")
+   
     }
     func setupui(){
         backVew.layer.cornerRadius = 30
@@ -42,41 +43,48 @@ class LoginVC: UIViewController {
  
         registerBtn.titleLabel?.minimumScaleFactor = 0.5
         lognBtn.layer.cornerRadius = lognBtn.frame.height / 2 - 10
+        emailTf.text = ""
+        passwordTf.text = ""
     }
     @IBAction func goLoginBtn(_ sender: UIButton) {
+        
         if emailTf.text != "" && passwordTf.text != "" {
             guard let email = emailTf.text else {return}
             if email.isValidEmail == true {
-                
+                loginViewModel?.login(email: email , password: passwordTf.text!)
+                loginViewModel?.bindingResult = {
+                    if self.loginViewModel?.sucess == true {
+                        ProgressHUD.showSuccess("successfuly Login")
+                   let homeVC =  HomeViewController()
+                     self.navigationController?.pushViewController(homeVC, animated: true)
+                    }else{
+                        ProgressHUD.showError("Invalid Email Or Password")
+                    }
+                }
             }else{
                 ProgressHUD.showError("pleas insert email successfuly !!")
             }
         }else{
             ProgressHUD.showError("pleas fill all fields !!")
         }
-       
+  
     }
     
    
     @IBAction func doRegisterBtn(_ sender: UIButton) {
         let regVc = RegisterVC()
-        regVc.modalPresentationStyle = .fullScreen
-        self.present(regVc, animated: true)
+        self.navigationController?.pushViewController(regVc, animated: true)
     }
     
     
     
     
     func setupNavigationItems() {
-        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favoTapped))
-        let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartTapped))
-        favButton.tintColor = .purple
-        cartButton.tintColor = .purple
-        
-        navigationItem.setRightBarButtonItems([favButton], animated: false)
-        navigationItem.setLeftBarButtonItems([cartButton], animated: false)
+ 
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        navigationController?.navigationBar.tintColor = .purple
         
+<<<<<<< HEAD
         
     }
     @objc
@@ -88,5 +96,8 @@ class LoginVC: UIViewController {
         let cartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
         navigationController?.pushViewController(cartVC, animated: true)
         print("cart tapped!!")
+=======
+>>>>>>> filter
     }
+ 
 }

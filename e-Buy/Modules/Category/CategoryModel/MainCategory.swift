@@ -23,7 +23,7 @@ struct CustomCollection : Decodable {
     let bodyHTML: String?
     let publishedAt: Date?
     let sortOrder: String?
-    //  let templateSuffix: NSNull?
+    
     let publishedScope, adminGraphqlAPIID: String?
     let image: CategoryImage?
 }
@@ -31,7 +31,7 @@ struct CustomCollection : Decodable {
 // MARK: - Image
 struct CategoryImage : Decodable {
     let createdAt: Date?
-    //    let alt: NSNull?
+     
     let width, height: Int?
     let src: String?
 }

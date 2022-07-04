@@ -36,6 +36,7 @@ struct SmartCollection: Decodable {
 struct Image: Decodable {
     let createdAt: Date?
  //   let alt: NSNull
+    let position:Int?
     let width, height: Int?
     let src: String?
 }

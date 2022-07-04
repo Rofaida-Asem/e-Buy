@@ -16,8 +16,8 @@ struct Products: Decodable {
 struct Product: Decodable {
     let id: Int?
     let title, vendor: String?
-    let productType: String
-    //    let createdAt: Date?
+    let productType: String?
+   
     //    let handle: String?
     //    let updatedAt, publishedAt: Date?
     //    let templateSuffix: NSNull?
@@ -28,6 +28,7 @@ struct Product: Decodable {
     let image: ProductImage?
     
     enum CodingKeys: String, CodingKey {
+         
         case productType = "product_type"
         case title = "title"
         case vendor = "vendor"
@@ -36,12 +37,13 @@ struct Product: Decodable {
         case image = "image"
         case options = "options"
         case id = "id"
+       
     }
 }
 
 // MARK: - Image
 struct ProductImage: Decodable {
-    let id, productID, position: Int?
+    let id, product_id, position: Int?
     let createdAt, updatedAt: Date?
  //   let alt: NSNull
     let width, height: Int?
@@ -52,7 +54,7 @@ struct ProductImage: Decodable {
 
 // MARK: - Option
 struct Option: Decodable {
-    let id, productID: Int?
+    let id, product_id: Int?
     let name: String?
     let position: Int?
     let values: [String]?
@@ -60,7 +62,7 @@ struct Option: Decodable {
 
 // MARK: - Variant
 struct Variant: Decodable {
-    let id, productID: Int?
+    let id, product_id: Int?
     let title, price, sku: String?
  //   let position: Int?
  //   let inventoryPolicy: String?

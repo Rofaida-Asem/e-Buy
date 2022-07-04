@@ -29,13 +29,14 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupui()
+        setupNavigationItems()
         registerViewModel?.bindingresult = {
             if self.registerViewModel?.done == true {
                 ProgressHUD.showSuccess("Register successfuly")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                     let login = LoginVC()
                     login.modalPresentationStyle = .fullScreen
-                    self.present(login, animated: true)
+                    self.navigationController?.pushViewController(login, animated: true)
                 }
            
             }else{
@@ -73,6 +74,11 @@ class RegisterVC: UIViewController {
     
     
     
-    
+    func setupNavigationItems() {
+ 
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.purple]
+        navigationController?.navigationBar.tintColor = .purple
+        
+    }
 
 }

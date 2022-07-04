@@ -27,7 +27,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login To E-Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQV-Zh-hOb">
                     <rect key="frame" x="115.5" y="84" width="183" height="32.5"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
-                    <color key="textColor" red="0.57908074639999996" green="0.55618336010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.5171561241" green="0.23808974029999999" blue="0.50133401160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCo-tZ-wLB">
@@ -51,7 +51,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-ke-gF4">
                             <rect key="frame" x="128.5" y="203.5" width="157" height="47"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="tintColor" red="0.57908074639999996" green="0.55618336010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.5171561241" green="0.23808974029999999" blue="0.50133401160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
                                 <attributedString key="attributedTitle">
@@ -67,16 +67,16 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="her-tW-JeY">
-                            <rect key="frame" x="88" y="300.5" width="238.5" height="23"/>
+                            <rect key="frame" x="86" y="300.5" width="242" height="23"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Don't Have Account ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3H-Kf-UZt">
-                                    <rect key="frame" x="0.0" y="0.0" width="156.5" height="23"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="23"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-2G-6EF">
-                                    <rect key="frame" x="151.5" y="0.0" width="87" height="23"/>
+                                    <rect key="frame" x="155" y="0.0" width="87" height="23"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Register">
@@ -89,7 +89,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="0.57908074639999996" green="0.55618336010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.5171561241" green="0.23808974029999999" blue="0.50133401160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Ack-x0-FHe" firstAttribute="width" secondItem="fCo-tZ-wLB" secondAttribute="width" multiplier="0.78" id="3Wh-1O-P2U"/>
                         <constraint firstItem="Ack-x0-FHe" firstAttribute="centerX" secondItem="fCo-tZ-wLB" secondAttribute="centerX" id="AIV-jw-8Cx"/>

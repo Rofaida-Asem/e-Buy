@@ -39,15 +39,7 @@ class RegisterViewModel {
                 guard let result = response?.customer else {return}
                 print(result)
                 self.done = true
-//
-//                guard let id = result.id else {return}
-//                print(id)
-//
-//              let defaults = UserDefaults.standard
-//               defaults.set(id, forKey: "userID")
-//                let userid = defaults.integer(forKey: "userID")
-//                print("the userdefault is "  , userid)
-//                defaults.set(response?.customer?.firstName, forKey: "UserName")
+ 
             }
         }
         

@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         homeNavigationVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         categoryNavigationVC.tabBarItem = UITabBarItem(title: "Category", image: UIImage(systemName: "square.grid.2x2"), tag: 1)
-        let loginVC = UINavigationController(rootViewController: LoginVC())
-        loginVC.tabBarItem = UITabBarItem(title: "ME", image: UIImage(systemName: "person"),tag: 2)
-        tabBarVC.viewControllers = [homeNavigationVC,categoryNavigationVC,loginVC]
+        let meVc = UINavigationController(rootViewController: MeViewController())
+        meVc.tabBarItem = UITabBarItem(title: "ME", image: UIImage(systemName: "person"),tag: 2)
+        tabBarVC.viewControllers = [homeNavigationVC,categoryNavigationVC,meVc]
         return tabBarVC
     }
 

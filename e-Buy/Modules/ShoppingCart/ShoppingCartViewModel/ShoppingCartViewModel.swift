@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class CartViewModel {
+class CartViewModel: NSObject {
     
     let networkShared  = ApiService.shared
     let coreDataShared = CoreDataManager.shared
@@ -34,7 +34,10 @@ class CartViewModel {
     var updateCashPriceLabel: (()->())  = {}
     var reloadTableViewClosure: (()->()) = {}
     
-   
+    override init() {
+        super.init()
+        fetchCartItems()
+    }
     
     
     func fetchCartItems(){

@@ -18,7 +18,6 @@ class Constants {
     private static let custemCollections = "/custom_collections.json"
     private static let collections = "/collections"
     private static let orders = "/orders.json"
-    
     class func getBrands_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.smartCollection
     }
@@ -38,6 +37,23 @@ class Constants {
     class func getOrders_URL() -> String {
         return Constants.apiKey + Constants.password + Constants.hostname + Constants.version + Constants.orders
     }
+     
+}
+
+func addressById(userId : Int,addressId : Int)->String{
+    let url = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/customers/\(userId)/addresses/\(addressId).json"
+    return url
+}
+
+
+func allAddresses (userId : Int)->String{
+    let url = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/customers/\(userId)/addresses.json"
+    return url
+}
+
+func customerById (userId : Int)->String{
+    let url = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/customers/\(userId).json"
+    return url
 }
 
 // let smartCollection = "https://fde429753a207f610321a557c2e0ceb0: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@menofia-2022-q3.myshopify.com/admin/api/2022-04/smart_collections/286861033643.json"

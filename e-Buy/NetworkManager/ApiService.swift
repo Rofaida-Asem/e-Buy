@@ -12,6 +12,42 @@ class ApiService {
     
     static let shared = ApiService()
     
+    func getDataFromApi<T:Codable>(urlString: String,baseModel: T.Type ,completion: @escaping (Result<T,ErrorMessages>)->Void ){
+        guard let url = URL(string: urlString) else{
+            completion(.failure(.invalidUrl))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let _ = error {
+                completion(.failure(.noInternet))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
+                //                print("response \(response)")
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            do{
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .useDefaultKeys
+                let resultData = try decoder.decode(T.self, from: data)
+                completion(.success(resultData))
+                //                print(resultData)
+                
+            }catch{
+                print(error.localizedDescription)
+                completion(.failure(.invalidDataAfterDecoding))
+                
+            }
+        }
+        task.resume()
+        
+    }
     func getData<T: Decodable>(url: String, completion: @escaping (T?,Error?)-> Void){
         AF.request(url).response { (response) in
             guard let data = response.data else { return }
@@ -79,9 +115,54 @@ class ApiService {
         }
         task.resume()
     }
+
+
+func addAddress(id: Int, address: Addresses, completion: @escaping(Data?, URLResponse?, Error?)->()){
+    let id = id
+    let customer = CustomerAddress(addresses: [address])
+    let putObject = PutAddress(customer: customer)
+    guard let url = URL(string: customerById(userId: id)) else {return}
+    var request = URLRequest(url: url)
+    request.httpMethod = "PUT"
+    let session = URLSession.shared
+    request.httpShouldHandleCookies = false
+    
+    do {
+        request.httpBody = try JSONSerialization.data(withJSONObject: putObject.asDictionary(), options: .prettyPrinted)
+    } catch let error {
+        print(error.localizedDescription)
+    }
+    //HTTP Headers
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue("application/json", forHTTPHeaderField: "Accept")
+    
+    session.dataTask(with: request) { (data, response, error) in
+        completion(data, response, error)
+    }.resume()
 }
+
+func deleteAddress(userId: Int, addressId: Int,completion: @escaping(Data?, URLResponse?, Error?)->()){
+   
+    guard let url = URL(string: addressById(userId: userId, addressId: addressId)) else {return}
+    var request = URLRequest(url: url)
+    request.httpMethod = "DELETE"
+    let session = URLSession.shared
+    request.httpShouldHandleCookies = false
+    
+    //HTTP Headers
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue("application/json", forHTTPHeaderField: "Accept")
+    
+    session.dataTask(with: request) { (data, response, error) in
+        completion(data, response, error)
+    }.resume()
+}
+
+
 
 enum httpMethod: String {
     case post = "POST"
     case get  = "GET"
+}
+    
 }

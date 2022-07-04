@@ -166,6 +166,69 @@ class CoreDataManager {
             }
         
     }
+    
+    private func getAllOfAddressNSManageObjectArr(completion:@escaping((Result<[NSManagedObject],ErrorMessages>)->Void)){
+        var objects = [NSManagedObject]()
+        let managedObjectContext = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Address")
+        do{
+            objects = try managedObjectContext.fetch(fetchRequest)
+            completion(.success(objects))
+        }catch let error as NSError {
+            print("Could not retrive data . \(error), \(error.userInfo)")
+            completion(.failure(.errorRetivingFromCoreData))
+        }
+    }
+    
+    func getAllAddressWithArray( completion: @escaping ((Result<[AddressCellViewModel], ErrorMessages>)->Void)){
+        var arrOfAddress = [AddressCellViewModel]()
+        
+        getAllOfAddressNSManageObjectArr { result in
+            switch result{
+            case .success(let arr):
+                for item in arr{
+                    let address = AddressCellViewModel(addressTitle: item.value(forKey: "name") as! String, owner: item.value(forKey: "owner") as! String, phoneNumber: item.value(forKey: "phoneNum") as! String, cityCountry: item.value(forKey: "cityCountry") as! String, address: item.value(forKey: "address") as! String, isDefault: item.value(forKey: "isDefault") as! String)
+                    arrOfAddress.append(address)
+                }
+                completion(.success(arrOfAddress))
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+        
+    }
+    
+    
+    func checkAddressBeforeInsert(address: AddressCellViewModel)->Bool{
+        var success = false
+        let managedObjectContext = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Address")
+        fetchRequest.predicate = NSPredicate(format: "isDefault == %@", address.isDefault)
+        do{
+           let objects = try managedObjectContext.fetch(fetchRequest)
+            if objects.count == 1 {
+                let addressUpdate = objects[0]
+                addressUpdate.setValue(address.address, forKey: "address")
+                addressUpdate.setValue(address.isDefault, forKey: "isDefault")
+                addressUpdate.setValue(address.addressTitle, forKey: "name")
+                addressUpdate.setValue(address.owner, forKey: "owner")
+                addressUpdate.setValue(address.phoneNumber, forKey: "phoneNumber")
+                addressUpdate.setValue(address.cityCountry, forKey: "cityCountry")
+                self.saveContext()
+                success = true
+            }else{
+                success = false
+            }
+
+            }
+
+        catch let error as NSError {
+            print("Could not retrive data . \(error), \(error.userInfo)")
+            success = false
+        }
+        return success
+    }
    
     
     
